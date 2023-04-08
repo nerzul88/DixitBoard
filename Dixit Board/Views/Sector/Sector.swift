@@ -2,7 +2,7 @@
 //  Sector.swift
 //  Dixit Board
 //
-//  Created by Андрей Рыбалкин on 08.04.2023.
+//  Created by Aleksandr Kasianov on 08.04.2023.
 //
 
 import SwiftUI

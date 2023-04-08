@@ -58,6 +58,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B29C4F429E20DAC0025A624 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		1BFF4E5229E1AD17007E2A11 = {
 			isa = PBXGroup;
 			children = (
@@ -77,13 +84,11 @@
 		1BFF4E5D29E1AD17007E2A11 /* Dixit Board */ = {
 			isa = PBXGroup;
 			children = (
+				1B29C4F429E20DAC0025A624 /* Scenes */,
 				1BFF4E9829E20C8D007E2A11 /* Misc */,
 				1BFF4E8E29E2049D007E2A11 /* Extensions */,
 				1BFF4E8229E1F61E007E2A11 /* Common */,
 				1BFF4E7D29E1E8B3007E2A11 /* Views */,
-				1BFF4E7829E1E83A007E2A11 /* Sector */,
-				1BFF4E8529E1FA53007E2A11 /* Player */,
-				1BFF4E9329E205D1007E2A11 /* PlayersBottom */,
 				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
 				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
 				1BFF4E6429E1AD18007E2A11 /* Preview Content */,
@@ -113,6 +118,9 @@
 		1BFF4E7D29E1E8B3007E2A11 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BFF4E7829E1E83A007E2A11 /* Sector */,
+				1BFF4E8529E1FA53007E2A11 /* Player */,
+				1BFF4E9329E205D1007E2A11 /* PlayersBottom */,
 				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
 			);
 			path = Views;
