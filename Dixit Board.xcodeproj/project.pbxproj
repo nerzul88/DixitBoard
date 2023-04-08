@@ -15,6 +15,12 @@
 		1BFF4E7B29E1E83A007E2A11 /* SectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E7929E1E83A007E2A11 /* SectorView.swift */; };
 		1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E7A29E1E83A007E2A11 /* SectorViewModel.swift */; };
 		1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */; };
+		1BFF4E8129E1F2FF007E2A11 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8029E1F2FF007E2A11 /* Sector.swift */; };
+		1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */; };
+		1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */; };
+		1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8A29E1FAD8007E2A11 /* Player.swift */; };
+		1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */; };
+		1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,12 @@
 		1BFF4E7929E1E83A007E2A11 /* SectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorView.swift; sourceTree = "<group>"; };
 		1BFF4E7A29E1E83A007E2A11 /* SectorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectorViewModel.swift; sourceTree = "<group>"; };
 		1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		1BFF4E8029E1F2FF007E2A11 /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		1BFF4E8A29E1FAD8007E2A11 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXColor.swift; sourceTree = "<group>"; };
+		1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +71,15 @@
 		1BFF4E5D29E1AD17007E2A11 /* Dixit Board */ = {
 			isa = PBXGroup;
 			children = (
+				1BFF4E8E29E2049D007E2A11 /* Extensions */,
+				1BFF4E8229E1F61E007E2A11 /* Common */,
 				1BFF4E7D29E1E8B3007E2A11 /* Views */,
 				1BFF4E7829E1E83A007E2A11 /* Sector */,
-				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
-				1BFF4E6029E1AD17007E2A11 /* ContentView.swift */,
+				1BFF4E8529E1FA53007E2A11 /* Player */,
 				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
 				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
 				1BFF4E6429E1AD18007E2A11 /* Preview Content */,
+				1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */,
 			);
 			path = "Dixit Board";
 			sourceTree = "<group>";
@@ -83,6 +97,7 @@
 			children = (
 				1BFF4E7929E1E83A007E2A11 /* SectorView.swift */,
 				1BFF4E7A29E1E83A007E2A11 /* SectorViewModel.swift */,
+				1BFF4E8029E1F2FF007E2A11 /* Sector.swift */,
 			);
 			path = Sector;
 			sourceTree = "<group>";
@@ -93,6 +108,33 @@
 				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1BFF4E8229E1F61E007E2A11 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
+				1BFF4E6029E1AD17007E2A11 /* ContentView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1BFF4E8529E1FA53007E2A11 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */,
+				1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */,
+				1BFF4E8A29E1FAD8007E2A11 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		1BFF4E8E29E2049D007E2A11 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,11 +207,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */,
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
+				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
 				1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */,
+				1BFF4E8129E1F2FF007E2A11 /* Sector.swift in Sources */,
 				1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */,
 				1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */,
+				1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */,
 				1BFF4E7B29E1E83A007E2A11 /* SectorView.swift in Sources */,
+				1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */,
+				1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */,
 				1BFF4E7129E1C2D3007E2A11 /* StackedCircles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

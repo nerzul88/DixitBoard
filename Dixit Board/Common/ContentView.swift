@@ -2,17 +2,15 @@
 //  ContentView.swift
 //  Dixit Board
 //
-//  Created by Aleksandr Kasianov on 08.04.2023.
+//  Created by Андрей Рыбалкин on 08.04.2023.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-        
-    let sectorViewModel = SectorViewModel(circleRadius: UIScreen.main.bounds.width * 0.074, arrowDirection: .degrees(180), arrowMargin: 0, number: 35, players: [.orange, .mint, .indigo])
-    
+            
     var body: some View {
-        SectorView(viewModel: sectorViewModel)
+        SectorView(viewModel: SectorViewModel(sector: Sector(circleRadius: UIScreen.main.bounds.width * 0.074, arrowDirection: 180, arrowMargin: 0, number: 35), players: []))
     }
 }
 
@@ -27,4 +25,3 @@ struct ContentView_Previews: PreviewProvider {
             }
         }
 }
-

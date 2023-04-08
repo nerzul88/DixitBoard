@@ -8,26 +8,16 @@ class SectorViewModel: ObservableObject {
     
     // MARK: - Internal var
     
-    let circleRadius: CGFloat
-    let arrowDirection: Angle
-    let arrowMargin: CGFloat
-    let number: Int
-
-    @State var players: [Color]
+    @State var sector: Sector
+    @State var players: [Player]
     
     // MARK: - Init
     
     init(
-        circleRadius: CGFloat,
-        arrowDirection: Angle,
-        arrowMargin: CGFloat,
-        number: Int,
-        players: [Color]
+        sector: Sector,
+        players: [Player]
     ) {
-        self.circleRadius = circleRadius
-        self.arrowDirection = arrowDirection
-        self.arrowMargin = arrowMargin
-        self.number = number
+        self.sector = sector
         self.players = players
     }
     
