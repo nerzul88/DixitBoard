@@ -11,6 +11,10 @@
 		1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C4F929E2134F0025A624 /* GameViewModel.swift */; };
 		1B29C50229E2F02A0025A624 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50029E2F02A0025A624 /* TopBarView.swift */; };
 		1B29C50329E2F02A0025A624 /* TopBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */; };
+		1B29C50929E2F5440025A624 /* PlayingTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50729E2F5440025A624 /* PlayingTableViewModel.swift */; };
+		1B29C50A29E2F5440025A624 /* PlayingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50829E2F5440025A624 /* PlayingTableView.swift */; };
+		1B29C50D29E2F9A90025A624 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50C29E2F9A90025A624 /* Color.swift */; };
+		1B29C50F29E311210025A624 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50E29E311210025A624 /* Size.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
 		1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6029E1AD17007E2A11 /* ContentView.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 		1B29C4F929E2134F0025A624 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		1B29C50029E2F02A0025A624 /* TopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarViewModel.swift; sourceTree = "<group>"; };
+		1B29C50729E2F5440025A624 /* PlayingTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingTableViewModel.swift; sourceTree = "<group>"; };
+		1B29C50829E2F5440025A624 /* PlayingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingTableView.swift; sourceTree = "<group>"; };
+		1B29C50C29E2F9A90025A624 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		1B29C50E29E311210025A624 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
 		1BFF4E6029E1AD17007E2A11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -90,6 +98,24 @@
 				1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */,
 			);
 			path = TopBar;
+			sourceTree = "<group>";
+		};
+		1B29C50629E2F5440025A624 /* PlayingTable */ = {
+			isa = PBXGroup;
+			children = (
+				1B29C50729E2F5440025A624 /* PlayingTableViewModel.swift */,
+				1B29C50829E2F5440025A624 /* PlayingTableView.swift */,
+			);
+			path = PlayingTable;
+			sourceTree = "<group>";
+		};
+		1B29C50B29E2F9970025A624 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1B29C50C29E2F9A90025A624 /* Color.swift */,
+				1B29C50E29E311210025A624 /* Size.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		1BFF4E5229E1AD17007E2A11 = {
@@ -150,6 +176,7 @@
 				1BFF4E8529E1FA53007E2A11 /* Player */,
 				1BFF4E9329E205D1007E2A11 /* BottomBar */,
 				1B29C4FF29E2F02A0025A624 /* TopBar */,
+				1B29C50629E2F5440025A624 /* PlayingTable */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +184,7 @@
 		1BFF4E8229E1F61E007E2A11 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1B29C50B29E2F9970025A624 /* Constants */,
 				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
 				1BFF4E6029E1AD17007E2A11 /* ContentView.swift */,
 			);
@@ -270,21 +298,25 @@
 			files = (
 				1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */,
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
+				1B29C50929E2F5440025A624 /* PlayingTableViewModel.swift in Sources */,
 				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
 				1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */,
 				1BFF4E9729E205D1007E2A11 /* BottomBarViewModel.swift in Sources */,
 				1BFF4E8129E1F2FF007E2A11 /* Sector.swift in Sources */,
+				1B29C50F29E311210025A624 /* Size.swift in Sources */,
 				1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */,
 				1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */,
 				1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */,
 				1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */,
 				1B29C50229E2F02A0025A624 /* TopBarView.swift in Sources */,
 				1B29C50329E2F02A0025A624 /* TopBarViewModel.swift in Sources */,
+				1B29C50D29E2F9A90025A624 /* Color.swift in Sources */,
 				1BFF4E7B29E1E83A007E2A11 /* SectorView.swift in Sources */,
 				1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */,
 				1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */,
 				1BFF4E9A29E20C96007E2A11 /* RoundedCornersShape.swift in Sources */,
 				1BFF4E7129E1C2D3007E2A11 /* StackedCircles.swift in Sources */,
+				1B29C50A29E2F5440025A624 /* PlayingTableView.swift in Sources */,
 				1B29C4FA29E2134F0025A624 /* GameView.swift in Sources */,
 				1BFF4E9629E205D1007E2A11 /* BottomBarView.swift in Sources */,
 			);

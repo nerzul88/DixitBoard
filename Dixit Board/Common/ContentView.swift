@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
             
     var body: some View {
-        SectorView(viewModel: SectorViewModel(sector: Sector(circleRadius: UIScreen.main.bounds.width * 0.074, arrowDirection: 180, arrowMargin: 0, number: 35), players: []))
+        SectorView(viewModel: SectorViewModel(sector: Sector(circleRadius: UIScreen.main.bounds.width * 0.074, arrowDirection: .down, arrowMargin: 0, number: 35, isInitial: false), players: []))
     }
 }
 
