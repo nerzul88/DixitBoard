@@ -17,7 +17,6 @@
 		1B29C50F29E311210025A624 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50E29E311210025A624 /* Size.swift */; };
 		1B29C51129E3122F0025A624 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C51029E3122F0025A624 /* MockData.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
-		1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6029E1AD17007E2A11 /* ContentView.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
 		1BFF4E6629E1AD18007E2A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6529E1AD18007E2A11 /* Preview Assets.xcassets */; };
 		1BFF4E7129E1C2D3007E2A11 /* StackedCircles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */; };
@@ -47,7 +46,6 @@
 		1B29C51029E3122F0025A624 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
-		1BFF4E6029E1AD17007E2A11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BFF4E6529E1AD18007E2A11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackedCircles.swift; sourceTree = "<group>"; };
@@ -120,6 +118,26 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		1B29C51229E33DF10025A624 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF4E7829E1E83A007E2A11 /* Sector */,
+				1BFF4E8529E1FA53007E2A11 /* Player */,
+				1BFF4E9329E205D1007E2A11 /* BottomBar */,
+				1B29C4FF29E2F02A0025A624 /* TopBar */,
+				1B29C50629E2F5440025A624 /* PlayingTable */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		1B29C51329E33E740025A624 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1BFF4E5229E1AD17007E2A11 = {
 			isa = PBXGroup;
 			children = (
@@ -139,16 +157,12 @@
 		1BFF4E5D29E1AD17007E2A11 /* Dixit Board */ = {
 			isa = PBXGroup;
 			children = (
-				1B29C4F429E20DAC0025A624 /* Scenes */,
-				1BFF4E9829E20C8D007E2A11 /* Misc */,
-				1BFF4E8E29E2049D007E2A11 /* Extensions */,
 				1BFF4E8229E1F61E007E2A11 /* Common */,
+				1BFF4E9829E20C8D007E2A11 /* Misc */,
+				1B29C4F429E20DAC0025A624 /* Scenes */,
+				1B29C51229E33DF10025A624 /* Controls */,
 				1BFF4E7D29E1E8B3007E2A11 /* Views */,
-				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
-				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
-				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
 				1BFF4E6429E1AD18007E2A11 /* Preview Content */,
-				1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */,
 			);
 			path = "Dixit Board";
 			sourceTree = "<group>";
@@ -174,11 +188,8 @@
 		1BFF4E7D29E1E8B3007E2A11 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1BFF4E7829E1E83A007E2A11 /* Sector */,
-				1BFF4E8529E1FA53007E2A11 /* Player */,
-				1BFF4E9329E205D1007E2A11 /* BottomBar */,
-				1B29C4FF29E2F02A0025A624 /* TopBar */,
-				1B29C50629E2F5440025A624 /* PlayingTable */,
+				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
+				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,9 +197,11 @@
 		1BFF4E8229E1F61E007E2A11 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1B29C50B29E2F9970025A624 /* Constants */,
 				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
-				1BFF4E6029E1AD17007E2A11 /* ContentView.swift */,
+				1B29C51329E33E740025A624 /* Models */,
+				1BFF4E8E29E2049D007E2A11 /* Extensions */,
+				1B29C50B29E2F9970025A624 /* Constants */,
+				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -303,7 +316,6 @@
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
 				1B29C50929E2F5440025A624 /* PlayingTableViewModel.swift in Sources */,
 				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
-				1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */,
 				1BFF4E9729E205D1007E2A11 /* BottomBarViewModel.swift in Sources */,
 				1BFF4E8129E1F2FF007E2A11 /* Sector.swift in Sources */,
 				1B29C50F29E311210025A624 /* Size.swift in Sources */,

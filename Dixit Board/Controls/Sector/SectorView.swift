@@ -15,9 +15,7 @@ struct SectorView: View {
     init(viewModel: SectorViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
-    
-    // MARK: - Internal var
-    
+        
     // MARK: - ViewBuilder var
     
     @ViewBuilder private var bodyView: some View {

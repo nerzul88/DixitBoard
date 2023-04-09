@@ -17,10 +17,7 @@ struct TopBarView: View {
     }
     
     // MARK: - Internal var
-    
-    var onTapMenu: (() -> Void)?
-    var onTapClose: (() -> Void)?
-    
+        
     @ViewBuilder private var topBar: some View {
         
         ZStack {
@@ -34,19 +31,19 @@ struct TopBarView: View {
                 )
             
             HStack {
-                Button(action: { self.onTapMenu?() }) {
+                Button(action: { viewModel.onTapMenu?() }) {
                     Image(systemName: "line.horizontal.3")
                         .font(.title)
                         .fontWeight(.bold)
                         .tint(.accentColor)
                 }
                                 
-                Text("Dixit game".uppercased())
+                Text("Dixit board".uppercased())
                     .font(.system(size: 35, weight: .bold, design: .default))
                     .foregroundColor(.accentColor)
                     .frame(maxWidth: .infinity)
                                 
-                Button(action: { self.onTapClose?() }) {
+                Button(action: { viewModel.onTapClose?() }) {
                     Image(systemName: "xmark")
                         .font(.title)
                         .fontWeight(.bold)
@@ -67,15 +64,5 @@ struct TopBarView: View {
     var body: some View {
         topBar
             .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 10)
-    }
-}
-
-// MARK: -
-
-struct Example3_Preview: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            TopBarView(viewModel: .init())
-        }
     }
 }

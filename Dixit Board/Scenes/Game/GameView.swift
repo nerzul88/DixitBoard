@@ -16,9 +16,34 @@ struct GameView: View {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
-    // MARK: - Internal var
+    // MARK: - ViewBuilder var
+    
+    @ViewBuilder private var mainView: some View {
+        VStack {
+            
+            TopBarView(viewModel: .init(onTapMenu: viewModel.onTapMenu, onTapClose: viewModel.onTapClose))
+            
+            PlayingTableView(viewModel: .init())
+            
+            BottomBarView(viewModel: .init(players: MockData.palyers))
+        }
+        .ignoresSafeArea()
+    }
+    
+    // MARK: - body
     
     var body: some View {
-        EmptyView()
+        mainView
     }
 }
+    // MARK: -
+    
+    struct Example_Preview: PreviewProvider {
+        static var previews: some View {
+            GameView(viewModel: .init(onTapMenu: {
+                ()
+            }, onTapClose: {
+                ()
+            }))
+        }
+    }
