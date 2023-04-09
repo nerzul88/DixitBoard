@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B29C4FA29E2134F0025A624 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C4F829E2134F0025A624 /* GameView.swift */; };
+		1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C4F929E2134F0025A624 /* GameViewModel.swift */; };
+		1B29C50229E2F02A0025A624 /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50029E2F02A0025A624 /* TopBarView.swift */; };
+		1B29C50329E2F02A0025A624 /* TopBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
 		1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6029E1AD17007E2A11 /* ContentView.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
@@ -21,12 +25,16 @@
 		1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8A29E1FAD8007E2A11 /* Player.swift */; };
 		1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */; };
 		1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */; };
-		1BFF4E9629E205D1007E2A11 /* PlayersBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9429E205D1007E2A11 /* PlayersBottomView.swift */; };
-		1BFF4E9729E205D1007E2A11 /* PlayersBottomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9529E205D1007E2A11 /* PlayersBottomViewModel.swift */; };
+		1BFF4E9629E205D1007E2A11 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9429E205D1007E2A11 /* BottomBarView.swift */; };
+		1BFF4E9729E205D1007E2A11 /* BottomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9529E205D1007E2A11 /* BottomBarViewModel.swift */; };
 		1BFF4E9A29E20C96007E2A11 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9929E20C96007E2A11 /* RoundedCornersShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B29C4F829E2134F0025A624 /* GameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1B29C4F929E2134F0025A624 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		1B29C50029E2F02A0025A624 /* TopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
+		1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarViewModel.swift; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
 		1BFF4E6029E1AD17007E2A11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,8 +50,8 @@
 		1BFF4E8A29E1FAD8007E2A11 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXColor.swift; sourceTree = "<group>"; };
 		1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
-		1BFF4E9429E205D1007E2A11 /* PlayersBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersBottomView.swift; sourceTree = "<group>"; };
-		1BFF4E9529E205D1007E2A11 /* PlayersBottomViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersBottomViewModel.swift; sourceTree = "<group>"; };
+		1BFF4E9429E205D1007E2A11 /* BottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
+		1BFF4E9529E205D1007E2A11 /* BottomBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarViewModel.swift; sourceTree = "<group>"; };
 		1BFF4E9929E20C96007E2A11 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +69,27 @@
 		1B29C4F429E20DAC0025A624 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1B29C4F729E2134F0025A624 /* Game */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1B29C4F729E2134F0025A624 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				1B29C4F829E2134F0025A624 /* GameView.swift */,
+				1B29C4F929E2134F0025A624 /* GameViewModel.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		1B29C4FF29E2F02A0025A624 /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				1B29C50029E2F02A0025A624 /* TopBarView.swift */,
+				1B29C50129E2F02A0025A624 /* TopBarViewModel.swift */,
+			);
+			path = TopBar;
 			sourceTree = "<group>";
 		};
 		1BFF4E5229E1AD17007E2A11 = {
@@ -89,6 +116,7 @@
 				1BFF4E8E29E2049D007E2A11 /* Extensions */,
 				1BFF4E8229E1F61E007E2A11 /* Common */,
 				1BFF4E7D29E1E8B3007E2A11 /* Views */,
+				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
 				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
 				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
 				1BFF4E6429E1AD18007E2A11 /* Preview Content */,
@@ -120,8 +148,8 @@
 			children = (
 				1BFF4E7829E1E83A007E2A11 /* Sector */,
 				1BFF4E8529E1FA53007E2A11 /* Player */,
-				1BFF4E9329E205D1007E2A11 /* PlayersBottom */,
-				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
+				1BFF4E9329E205D1007E2A11 /* BottomBar */,
+				1B29C4FF29E2F02A0025A624 /* TopBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,13 +181,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		1BFF4E9329E205D1007E2A11 /* PlayersBottom */ = {
+		1BFF4E9329E205D1007E2A11 /* BottomBar */ = {
 			isa = PBXGroup;
 			children = (
-				1BFF4E9429E205D1007E2A11 /* PlayersBottomView.swift */,
-				1BFF4E9529E205D1007E2A11 /* PlayersBottomViewModel.swift */,
+				1BFF4E9429E205D1007E2A11 /* BottomBarView.swift */,
+				1BFF4E9529E205D1007E2A11 /* BottomBarViewModel.swift */,
 			);
-			path = PlayersBottom;
+			path = BottomBar;
 			sourceTree = "<group>";
 		};
 		1BFF4E9829E20C8D007E2A11 /* Misc */ = {
@@ -244,17 +272,21 @@
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
 				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
 				1BFF4E6129E1AD17007E2A11 /* ContentView.swift in Sources */,
-				1BFF4E9729E205D1007E2A11 /* PlayersBottomViewModel.swift in Sources */,
+				1BFF4E9729E205D1007E2A11 /* BottomBarViewModel.swift in Sources */,
 				1BFF4E8129E1F2FF007E2A11 /* Sector.swift in Sources */,
 				1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */,
+				1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */,
 				1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */,
 				1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */,
+				1B29C50229E2F02A0025A624 /* TopBarView.swift in Sources */,
+				1B29C50329E2F02A0025A624 /* TopBarViewModel.swift in Sources */,
 				1BFF4E7B29E1E83A007E2A11 /* SectorView.swift in Sources */,
 				1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */,
 				1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */,
 				1BFF4E9A29E20C96007E2A11 /* RoundedCornersShape.swift in Sources */,
 				1BFF4E7129E1C2D3007E2A11 /* StackedCircles.swift in Sources */,
-				1BFF4E9629E205D1007E2A11 /* PlayersBottomView.swift in Sources */,
+				1B29C4FA29E2134F0025A624 /* GameView.swift in Sources */,
+				1BFF4E9629E205D1007E2A11 /* BottomBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

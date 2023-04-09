@@ -1,10 +1,10 @@
 //
-// PlayersBottomViewModel.swift
+// BottomBarViewModel.swift
 //
 
 import SwiftUI
 
-class PlayersBottomViewModel: ObservableObject {
+class BottomBarViewModel: ObservableObject {
     
     // MARK: - Internal published var
     

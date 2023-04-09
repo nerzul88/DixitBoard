@@ -1,18 +1,18 @@
 //
-// PlayersBottomView.swift
+//  BottomBarView.swift
 //
 
 import SwiftUI
 
-struct PlayersBottomView: View {
+struct BottomBarView: View {
     
     // MARK: - Internal state object var
     
-    @ObservedObject var viewModel: PlayersBottomViewModel
+    @ObservedObject var viewModel: BottomBarViewModel
     
     // MARK: - Internal init
     
-    init(viewModel: PlayersBottomViewModel) {
+    init(viewModel: BottomBarViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
@@ -69,7 +69,7 @@ struct Example2_Preview: PreviewProvider {
             VStack {
                 Spacer()
                 
-                PlayersBottomView(viewModel: .init(players: [
+                BottomBarView(viewModel: .init(players: [
                     Player(name: "Andrey", color: .init(color: .indigo), number: 1, position: 0, isActive: true),
                     Player(name: "Alex", color: .init(color: Color.orange), number: 2, position: 12, isActive: false),
                     Player(name: "Julia", color: .init(color: Color.green), number: 3, position: 0, isActive: true),
