@@ -66,7 +66,7 @@ struct TopBarView: View {
 
     var body: some View {
         topBar
-            .shadow(color: .black.opacity(0.25), radius: 50, x: 0, y: 15)
+            .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: 10)
     }
 }
 

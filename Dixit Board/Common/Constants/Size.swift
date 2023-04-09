@@ -11,7 +11,11 @@ import UIKit
 final class Sizes {
     
     static var sectorRadius: CGFloat {
-        return UIScreen.main.bounds.width / 15.5
+        return UIScreen.main.bounds.width / 14
+    }
+    
+    static var sectorWidth: CGFloat {
+        return Sizes.sectorRadius * 2
     }
     
     static var arrowMargin: CGFloat {

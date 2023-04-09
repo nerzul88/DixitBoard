@@ -46,27 +46,27 @@ struct PlayingTableView: View {
     
     
     @ViewBuilder private var mainView: some View {
-        VStack {
-                        
-            HStack {
-                VStack(alignment: .leading) {
-                    ForEach(0..<6) { id in
-                        SectorView(viewModel: .init(sector: .init(circleRadius: Sizes.sectorRadius, arrowDirection: viewModel.getDirection(id), arrowMargin: 7, number: id, isInitial: false), players: []))
-                    }
-                }
-                .frame(width: 66)
+//        VStack {
+//
+//            HStack {
+//                VStack(alignment: .leading) {
+//                    ForEach(0..<6) { id in
+//                        SectorView(viewModel: .init(sector: .init(circleRadius: Sizes.sectorRadius, arrowDirection: viewModel.getDirection(id), arrowMargin: 7, number: id, isInitial: false), players: []))
+//                    }
+//                }
+//                .frame(width: 66)
                 
                 
                 VStack {
-                    ForEach(0..<6) { vid in
+                    ForEach(0..<6) { row in
                         HStack {
-                            ForEach(0..<4) { hid in
+                            ForEach(0..<5) { column in
                                 
                                 let sector: Sector = .init(
                                     circleRadius: Sizes.sectorRadius,
-                                    arrowDirection: viewModel.getDirection(vid, hid),
+                                    arrowDirection: getDirection(row, column),
                                     arrowMargin: Sizes.arrowMargin,
-                                    number: viewModel.getNumber(vid, hid),
+                                    number: getNumber(row, column),
                                     isInitial: false
                                 )
                                 
@@ -75,9 +75,47 @@ struct PlayingTableView: View {
                         }
                     }
                 }
+//            }
+//        }
+    }
+    
+    func getDirection(_ row: Int, _ column: Int) -> Direction {
+                
+        return column == 0
+        ? row == 5
+        ? .right
+        : .down
+        : row == 0 && column == 1
+        ? .leftUp
+        : row % 2 == 0
+        ? column == 1 ? .up
+        : .left
+        : column == 4 ? .up
+        : .right
+
+    }
+
+    
+    func getNumber(_ vid: Int, _ hid: Int) -> Int {
+                
+        var cellNum = 0
+        
+        if hid == 0 {
+            return vid
+        } else {
+            
+            if vid % 2 == 0 { // Even string
+                cellNum = (vid + 1) * 4 - (3 - hid)
+                return 31 - cellNum
+            } else {          // Odd string
+                cellNum = (vid + 1) * 4 - hid
+                return 29 - cellNum
             }
+            
         }
     }
+
+
     
     // MARK: - body
     
