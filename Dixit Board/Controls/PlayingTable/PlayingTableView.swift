@@ -9,7 +9,7 @@ struct PlayingTableView: View {
     // MARK: - Internal state object var
     
     @ObservedObject var viewModel: PlayingTableViewModel
-    
+        
     // MARK: - Internal init
     
     init(viewModel: PlayingTableViewModel) {
@@ -33,12 +33,15 @@ struct PlayingTableView: View {
     @ViewBuilder private var topSectorView: some View {
         HStack(spacing: 16) {
             
-            SectorView(viewModel: .init(sector: .init(circleRadius: Sizes.sectorRadius, arrowDirection: .down, arrowMargin: Sizes.arrowMargin, number: 30, isInitial: true), players: []))
+            SectorView(viewModel: .init(sector: .init(circleRadius: Sizes.sectorRadius, arrowDirection: .down, arrowMargin: Sizes.arrowMargin, number: 30, isInitial: true), players: viewModel.players.filter { $0.position == 30 }))
                 .frame(width: Sizes.sectorWidth)
             
             stepView
                 .frame(height: Sizes.sectorWidth)
                 .shadow(color: Color(Colors.shadow), radius: 3, x: 3, y: 3)
+                .onTapGesture {
+                    ()
+                }
         }
     }
     
@@ -55,15 +58,17 @@ struct PlayingTableView: View {
                     HStack {
                         ForEach(0..<5) { column in
                             
+                            let number = viewModel.getNumber(row, column)
+                            let direction = viewModel.getDirection(row, column)
                             let sector: Sector = .init(
                                 circleRadius: Sizes.sectorRadius,
-                                arrowDirection: viewModel.getDirection(row, column),
+                                arrowDirection: direction,
                                 arrowMargin: Sizes.arrowMargin,
-                                number: viewModel.getNumber(row, column),
+                                number: number,
                                 isInitial: false
                             )
                             
-                            SectorView(viewModel: .init(sector: sector, players: []))
+                            SectorView(viewModel: .init(sector: sector, players: viewModel.players.filter { $0.position == number } ))
                         }
                     }
                 }

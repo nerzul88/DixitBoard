@@ -20,11 +20,19 @@ struct StackedCircles: View {
     var body: some View {
         ZStack {
             ForEach(0..<players.count, id: \.self) { index in
-                Circle()
-                    .foregroundColor(self.players[index].color.swiftUIColor)
-                    .frame(width: size, height: size)
-                    .offset(y: CGFloat(-index * (Int(size) / 5) ))
-                    .shadow(radius: 5)
+//                ZStack {
+                    Circle()
+                        .foregroundColor(self.players[index].color.swiftUIColor)
+                        .frame(width: size, height: size)
+                        .offset(y: CGFloat(-index * (Int(size) / 5) ))
+                        .shadow(radius: 1)
+                    
+//                    Text("\(players[index].position)")
+//                        .font(.system(size: 21, weight: .bold, design: .default))
+//                        .foregroundColor(.white)
+//                        .opacity(0.75)
+//                        .offset(y: CGFloat(-index * (Int(size) / 5) ))
+//                }
             }
         }
     }

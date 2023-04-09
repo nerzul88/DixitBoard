@@ -9,7 +9,9 @@ class PlayingTableViewModel: ObservableObject {
     // MARK: -
     
     @Published var currentPlayer: Player = .init(name: "Andrey", color: .init(color: .pink), number: 3, position: 3, isActive: true)
-                
+           
+    @Published var players = MockData.palyers
+
     // MARK: -
     
     // Arrow direction calculating

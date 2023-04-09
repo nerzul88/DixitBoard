@@ -9,7 +9,7 @@ struct GameView: View {
     // MARK: - Internal state object var
     
     @ObservedObject var viewModel: GameViewModel
-    
+        
     // MARK: - Internal init
     
     init(viewModel: GameViewModel) {
@@ -21,7 +21,11 @@ struct GameView: View {
     @ViewBuilder private var mainView: some View {
         VStack {
             
-            TopBarView(viewModel: .init(onTapMenu: viewModel.onTapMenu, onTapClose: viewModel.onTapClose))
+            TopBarView(viewModel: .init(onTapMenu: {
+                ()
+            }, onTapClose: {
+                ()
+            }) )
             
             PlayingTableView(viewModel: .init())
             
@@ -40,10 +44,6 @@ struct GameView: View {
     
     struct Example_Preview: PreviewProvider {
         static var previews: some View {
-            GameView(viewModel: .init(onTapMenu: {
-                ()
-            }, onTapClose: {
-                ()
-            }))
+            GameView(viewModel: .init())
         }
     }
