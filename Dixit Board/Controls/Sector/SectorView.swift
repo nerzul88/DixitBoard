@@ -29,8 +29,6 @@ struct SectorView: View {
                     .font(.system(size: 25, weight: viewModel.sector.isInitial ? .bold : .regular, design: .default))
                     .foregroundColor(viewModel.sector.isInitial ? .white : Color(Colors.secondary))
                 
-                StackedCircles(players: viewModel.players, size: Sizes.sectorRadius * 1.5)
-
                 Triangle()
                     .fill(Color(Colors.secondary))
                     .frame(width: viewModel.sector.circleRadius/2.75, height: viewModel.sector.circleRadius/2.75)

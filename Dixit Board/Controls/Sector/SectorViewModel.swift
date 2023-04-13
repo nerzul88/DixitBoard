@@ -9,16 +9,13 @@ class SectorViewModel: ObservableObject {
     // MARK: - Internal var
     
     @State var sector: Sector
-    @State var players: [Player]
     
     // MARK: - Init
     
     init(
-        sector: Sector,
-        players: [Player]
+        sector: Sector
     ) {
         self.sector = sector
-        self.players = players
     }
     
     // MARK: - Internal func

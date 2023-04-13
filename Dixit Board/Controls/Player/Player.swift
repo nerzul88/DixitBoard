@@ -10,23 +10,26 @@ import SwiftUI
 
 struct Player {
     
-    let name: String
-    let color: DXColor
-    let number: Int
-    let position: Int
-    let isActive: Bool
+    var name: String
+    var color: DXColor
+    var number: Int
+    var sector: Int
+    var isActive: Bool
+    var position: CGPoint
     
     init(
         name: String,
         color: DXColor,
         number: Int,
-        position: Int,
-        isActive: Bool
+        sector: Int,
+        isActive: Bool,
+        position: CGPoint
     ) {
         self.name = name
         self.color = color
         self.number = number
-        self.position = position
+        self.sector = sector
         self.isActive = isActive
+        self.position = position
     }
 }

@@ -9,30 +9,25 @@ import SwiftUI
 
 struct StackedCircles: View {
     
-    @State var players: [Player]
+    @Binding var players: [Player]
     @State var size: CGFloat
+    @State var sector: Int
     
-    init(players: [Player], size: CGFloat) {
-        self.players = players
+    init(players: Binding<[Player]>, size: CGFloat, sector: Int) {
+        self._players = players
         self.size = size
+        self.sector = sector
     }
 
     var body: some View {
         ZStack {
-            ForEach(0..<players.count, id: \.self) { index in
-//                ZStack {
+            
+            ForEach(Array(players.filter{ $0.sector == self.sector }.enumerated()), id: \.element.number) { index, player in
                     Circle()
-                        .foregroundColor(self.players[index].color.swiftUIColor)
+                        .foregroundColor(player.color.swiftUIColor)
                         .frame(width: size, height: size)
                         .offset(y: CGFloat(-index * (Int(size) / 5) ))
                         .shadow(radius: 1)
-                    
-//                    Text("\(players[index].position)")
-//                        .font(.system(size: 21, weight: .bold, design: .default))
-//                        .foregroundColor(.white)
-//                        .opacity(0.75)
-//                        .offset(y: CGFloat(-index * (Int(size) / 5) ))
-//                }
             }
         }
     }
