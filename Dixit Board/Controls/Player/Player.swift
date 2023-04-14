@@ -14,7 +14,6 @@ struct Player {
     var color: DXColor
     var number: Int
     var sector: Int
-    var isActive: Bool
     var position: CGPoint
     
     init(
@@ -22,14 +21,12 @@ struct Player {
         color: DXColor,
         number: Int,
         sector: Int,
-        isActive: Bool,
         position: CGPoint
     ) {
         self.name = name
         self.color = color
         self.number = number
         self.sector = sector
-        self.isActive = isActive
         self.position = position
     }
 }

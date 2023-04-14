@@ -36,6 +36,7 @@ struct PlayerView: View {
                     .font(.system(size: 25, weight: .bold, design: .default))
                     .foregroundColor(.white)
                     .padding(.trailing)
+                    .lineLimit(1)
             }
         }
     }
@@ -45,10 +46,14 @@ struct PlayerView: View {
     var body: some View {
         
         player
-            .frame(height: 50)
-            .padding(.vertical)
+            .frame(height: viewModel.height)
             .scaledToFit()
-            .opacity(viewModel.player.isActive ? 1 : 0.75)
         
+    }
+}
+
+struct Examplezxq_Preview: PreviewProvider {
+    static var previews: some View {
+        PlayerView(viewModel: .init(player: MockData.players[7]))
     }
 }

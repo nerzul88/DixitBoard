@@ -28,8 +28,8 @@ struct PlayingTableView: View {
     @ViewBuilder private var stepView: some View {
         ZStack {
             Capsule()
-                .foregroundColor(viewModel.currentPlayer.color.swiftUIColor)
-            Text("Step of player \(viewModel.currentPlayer.number)".uppercased())
+                .foregroundColor(viewModel.currentPlayer?.color.swiftUIColor)
+            Text("Step of player \(viewModel.currentPlayer?.number ?? 0)".uppercased())
                 .foregroundColor(.white)
                 .font(.system(size: 25, weight: .bold, design: .default))
                 .padding(.horizontal)
@@ -98,13 +98,13 @@ struct PlayingTableView: View {
                     }
                 }
             }
-            
-            VStack {
-                Spacer()
-                Button("MOVE") {
-                    viewModel.players[0].sector = 10
-                }
-            }
+//            
+//            VStack {
+//                Spacer()
+//                Button("MOVE") {
+//                    viewModel.players[0].sector = 10
+//                }
+//            }
         }
     }
     
@@ -116,11 +116,3 @@ struct PlayingTableView: View {
         }
     }
 }
-
-struct Example1_Preview: PreviewProvider {
-    static var previews: some View {
-        PlayingTableView(viewModel: .init())
-            .padding(.vertical, 100)
-    }
-}
-

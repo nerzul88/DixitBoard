@@ -9,7 +9,7 @@ struct GameView: View {
     // MARK: - Internal state object var
     
     @ObservedObject var viewModel: GameViewModel
-        
+    
     // MARK: - Internal init
     
     init(viewModel: GameViewModel) {
@@ -27,9 +27,10 @@ struct GameView: View {
                 ()
             }) )
             
-            PlayingTableView(viewModel: .init())
+            PlayingTableView(viewModel: .init(players: $viewModel.players) )
             
-            BottomBarView(viewModel: .init(players: MockData.palyers))
+            BottomBarView(viewModel: .init(players: $viewModel.players))
+            
         }
         .ignoresSafeArea()
     }
@@ -40,10 +41,10 @@ struct GameView: View {
         mainView
     }
 }
-    // MARK: -
-    
-    struct Example_Preview: PreviewProvider {
-        static var previews: some View {
-            GameView(viewModel: .init())
-        }
+// MARK: -
+
+struct Example_Preview: PreviewProvider {
+    static var previews: some View {
+        GameView(viewModel: .init())
     }
+}

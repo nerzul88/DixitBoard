@@ -8,14 +8,14 @@ class BottomBarViewModel: ObservableObject {
     
     // MARK: - Internal published var
     
-    @State var players: [Player]
+    @Binding var players: [Player]
     
     // MARK: - Init
     
     init(
-        players: [Player]
+        players: Binding<[Player]>
     ) {
-        self.players = players
+        self._players = players
     }
 
     // MARK: - Internal func
