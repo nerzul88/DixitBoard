@@ -46,6 +46,21 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
+            
+            GeometryReader { proxy in
+                Image("wild")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .blur(radius: 25)
+                .frame(
+                    width: proxy.size.width,
+                    height: proxy.size.height
+                )
+                .overlay {
+                    Color.black.opacity(0.5)
+                }
+            }
+
             mainView
             
             if showStepPicker {

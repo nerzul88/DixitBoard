@@ -21,20 +21,20 @@ struct PlayerView: View {
     @ViewBuilder private var player: some View {
         ZStack {
             Capsule(style: .circular)
-                .foregroundColor(viewModel.player.color.swiftUIColor)
+                .foregroundColor(Color(Colors.main))
             HStack {
                 ZStack {
                     Circle()
-                        .foregroundColor(.clear)
-                        .addBorder(.white, width: 1, cornerRadius: 25)
+                        .foregroundColor(viewModel.player.color.swiftUIColor)
+                        .addBorder(Color(Colors.main), width: 2, cornerRadius: 25)
                     Text("\(viewModel.player.number)")
                         .font(.system(size: 25, weight: .bold, design: .default))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(Colors.actor))
                 }
                 Spacer()
                 Text(viewModel.player.name.uppercased())
                     .font(.system(size: 25, weight: .bold, design: .default))
-                    .foregroundColor(.white)
+                    .foregroundColor(Color(Colors.actor))
                     .padding(.trailing)
                     .lineLimit(1)
             }

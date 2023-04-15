@@ -33,11 +33,11 @@ struct SetupView: View {
     @ViewBuilder private var setupView: some View {
         
         ZStack {
-            Color("main")
+            Color(Colors.main)
                 .cornerRadius(64)
                 .overlay(
                     RoundedRectangle(cornerRadius: 64)
-                        .stroke(Color("actor"), lineWidth: 8)
+                        .stroke(Color(Colors.actor), lineWidth: 8)
                 )
             
             VStack {
@@ -51,7 +51,7 @@ struct SetupView: View {
                         } label: {
                             Image(systemName: "plus")
                                 .resizable()
-                                .foregroundColor(Color("actor"))
+                                .foregroundColor(Color(Colors.actor))
                                 .frame(width: 32, height: 32)
                                 .rotationEffect(.degrees(45))
                         }
@@ -59,13 +59,13 @@ struct SetupView: View {
                     .padding(.horizontal)
                     Text("Игроки")
                         .font(.system(size: 36)).bold()
-                        .foregroundColor(Color("actor"))
+                        .foregroundColor(Color(Colors.actor))
                     
                 }
                 
                 Text("Добавьте от 3 до 10 игроков")
                     .font(.title3)
-                    .foregroundColor(Color("actor"))
+                    .foregroundColor(Color(Colors.actor))
                     .lineLimit(1)
 
                 ScrollView(.vertical, showsIndicators: false) {
@@ -82,7 +82,7 @@ struct SetupView: View {
                                 Image(systemName: "trash.circle")
                                     .resizable()
                                     .frame(width: 32, height: 32)
-                                    .foregroundColor(Color("actor"))
+                                    .foregroundColor(Color(Colors.actor))
                             }
                         }
                     }

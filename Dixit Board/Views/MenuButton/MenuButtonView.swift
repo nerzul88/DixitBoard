@@ -34,10 +34,10 @@ struct MenuButtonView: View {
         } label: {
             ZStack {
                 Capsule()
-                    .foregroundColor(Color("main").opacity(0.5))
+                    .foregroundColor(Color(Colors.main).opacity(0.5))
                     .overlay(
                         RoundedRectangle(cornerRadius: 35)
-                            .stroke(Color("actor"), lineWidth: 4)
+                            .stroke(Color(Colors.actor), lineWidth: 4)
                     )
                     .padding(4)
 
@@ -47,12 +47,12 @@ struct MenuButtonView: View {
                         Image(systemName: icon)
                             .resizable()
                             .frame(width: 25, height: 25)
-                            .foregroundColor(Color("actor"))
+                            .foregroundColor(Color(Colors.actor))
                     }
                     
                     Text(viewModel.title)
                         .font(.title).bold()
-                        .foregroundColor(Color("actor"))
+                        .foregroundColor(Color(Colors.actor))
                         .scaledToFit()
                 }
             }

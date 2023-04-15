@@ -31,13 +31,13 @@ struct BottomBarView: View {
                         corners: [.topLeft, .topRight],
                         radius: 48
                     )
-                    .fill(Color.white)
+                    .fill(Color(Colors.actor))
                 )
             
             VStack(spacing: 16) {
-                Text("Players: \(viewModel.players.count)".uppercased())
+                Text("Игроки: \(viewModel.players.count)".uppercased())
                     .font(.system(size: 32, weight: .bold, design: .default))
-                    .foregroundColor(Color("actor"))
+                    .foregroundColor(Color(Colors.main))
                     .padding(.top)
                 
                 ScrollView(.horizontal, showsIndicators: false) {

@@ -22,15 +22,16 @@ struct SectorView: View {
         GeometryReader { geometry in
             ZStack {
                 Circle()
-                    .fill(viewModel.sector.isInitial ? Color(Colors.initial) : Color(Colors.sector) )
+                    .fill(viewModel.sector.isInitial ? Color(Colors.actorSecondary) : Color(Colors.actor) )
                     .frame(width: viewModel.sector.circleRadius * 2, height: viewModel.sector.circleRadius * 2)
+                    .addBorder(Color(Colors.main), cornerRadius: 30)
 
                 Text("\(viewModel.sector.number)")
                     .font(.system(size: 25, weight: viewModel.sector.isInitial ? .bold : .regular, design: .default))
-                    .foregroundColor(viewModel.sector.isInitial ? .white : Color(Colors.secondary))
+                    .foregroundColor(viewModel.sector.isInitial ? .white : Color(Colors.main))
                 
                 Triangle()
-                    .fill(Color(Colors.secondary))
+                    .fill(Color(Colors.main))
                     .frame(width: viewModel.sector.circleRadius/2.75, height: viewModel.sector.circleRadius/2.75)
                     .offset(x: 0, y: -(viewModel.sector.circleRadius + viewModel.sector.arrowMargin + viewModel.sector.circleRadius / 4))
                     .rotationEffect(Angle(degrees: viewModel.sector.arrowDirection.rawValue))

@@ -27,7 +27,7 @@ struct TopBarView: View {
                         corners: [.bottomLeft, .bottomRight],
                         radius: 48
                     )
-                    .fill(Color.white)
+                    .fill(Color(Colors.actor))
                 )
             
             HStack {
@@ -35,19 +35,20 @@ struct TopBarView: View {
                     Image(systemName: "line.horizontal.3")
                         .font(.title)
                         .fontWeight(.bold)
-                        .tint(.accentColor)
+                        .foregroundColor(Color(Colors.main))
+                    
                 }
-                                
-                Text("Dixit board".uppercased())
-                    .font(.system(size: 35, weight: .bold, design: .default))
-                    .foregroundColor(.accentColor)
+                
+                Image("dixit-logo")
+                    .resizable()
+                    .scaledToFit()
                     .frame(maxWidth: .infinity)
                                 
                 Button(action: { viewModel.onTapClose?() }) {
                     Image(systemName: "xmark")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(Color(Colors.main))
                 }
             }
             .padding(.horizontal, 24)

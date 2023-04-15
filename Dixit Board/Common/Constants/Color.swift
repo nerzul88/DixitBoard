@@ -15,5 +15,5 @@ final class Colors {
     static let secondary = "secondary"
     static let main = "main"
     static let actor = "actor"
-    static let arrow = "arrow"
+    static let actorSecondary = "actor-secondary"
 }

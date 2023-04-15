@@ -34,28 +34,27 @@ struct StepPickerView: View {
     
     @ViewBuilder private var pickerView: some View {
         ZStack {
-            Color("main")
+            Color(Colors.main)
                 .cornerRadius(64)
                 .overlay(
                     RoundedRectangle(cornerRadius: 64)
-                        .stroke(Color("actor"), lineWidth: 8)
+                        .stroke(Color(Colors.actor), lineWidth: 8)
                 )
             
             VStack(spacing: 16) {
                 Text("\(Image(systemName: "circle.fill")) \(viewModel.name)")
                     .foregroundColor(viewModel.color.swiftUIColor)
-//                    .foregroundColor(Color("actor"))
                     .font(.system(size: 36))
                     .bold()
                 
                     
                 Text("Текущая позиция: \(viewModel.oldSector)")
-                    .foregroundColor(Color("actor"))
+                    .foregroundColor(Color(Colors.actor))
                     .font(.system(size: 24))
                     .bold()
                                     
                 Text("Новая позиция:")
-                    .foregroundColor(Color("actor"))
+                    .foregroundColor(Color(Colors.actor))
                     .font(.system(size: 24))
                     .bold()
                     

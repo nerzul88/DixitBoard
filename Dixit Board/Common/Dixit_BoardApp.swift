@@ -11,7 +11,8 @@ import SwiftUI
 struct Dixit_BoardApp: App {
     var body: some Scene {
         WindowGroup {
-            GameView(viewModel: .init())
+            MenuView()
+//            GameView(viewModel: .init(players: MockData.players))
         }
     }
 }

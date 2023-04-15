@@ -34,17 +34,17 @@ struct PickerView: View {
     
     @ViewBuilder private var pickerView: some View {
         ZStack {
-            Color("main")
+            Color(Colors.main)
                 .cornerRadius(64)
                 .overlay(
                     RoundedRectangle(cornerRadius: 64)
-                        .stroke(Color("actor"), lineWidth: 8)
+                        .stroke(Color(Colors.actor), lineWidth: 8)
                 )
             
             VStack {
                 HStack {
                     Text("Введите имя")
-                        .foregroundColor(Color("actor"))
+                        .foregroundColor(Color(Colors.actor))
                         .font(.title)
                         .bold()
                 }
@@ -52,13 +52,20 @@ struct PickerView: View {
                 VStack {
                     
                     TextField("", text: $viewModel.newPlayerName)
-                        .foregroundColor(Color("actor"))
+                        .foregroundColor(Color(Colors.actor))
                         .font(.title)
                     
                     Rectangle()
                         .frame(height: 2)
                 }
                 
+                Text("Выберите цвет")
+                    .foregroundColor(Color(Colors.actor))
+                    .font(.title)
+                    .bold()
+                    .padding(.top)
+
+
                 Picker("", selection: $viewModel.newPlayerColor) {
                     ForEach(0..<10) { index in
                         let color = Storage.shared.colors[index]
@@ -78,7 +85,6 @@ struct PickerView: View {
                             Player(
                                 name: viewModel.newPlayerName,
                                 color: .init(color: viewModel.newPlayerColor),
-//                                color: .init(color: .init(viewModel.newPlayerColor!)),
                                 number: viewModel.expectedNumber,
                                 sector: 0,
                                 position: .zero)
@@ -102,6 +108,7 @@ struct PickerView: View {
     var body: some View {
         pickerView
             .scaledToFit()
+            .padding()
     }
 }
 
