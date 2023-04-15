@@ -123,7 +123,7 @@ struct SetupView: View {
             setupView
             
             if showPicker {
-                PickerView(viewModel: .init(newPlayerName: "Andrey", newPlayerColor: .blue, expectedNumber: viewModel.players.count + 1), showPicker: $showPicker, onAddPlayerBlock: { player in
+                PickerView(viewModel: .init(expectedNumber: viewModel.players.count + 1, avaiableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
                     viewModel.players.append(player)
                 })
                     .frame(maxHeight: .infinity)

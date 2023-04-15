@@ -24,7 +24,7 @@ struct StackedCircles: View {
             
             ForEach(Array(players.filter{ $0.sector == self.sector }.enumerated()), id: \.element.number) { index, player in
                     Circle()
-                        .foregroundColor(player.color.swiftUIColor)
+                        .foregroundColor(Color(player.color))
                         .frame(width: size, height: size)
                         .offset(y: CGFloat(-index * (Int(size) / 5) ))
                         .shadow(radius: 1)

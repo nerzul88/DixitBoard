@@ -12,9 +12,9 @@ class StepPickerViewModel: ObservableObject {
     @Published var newSector: Int
 
     @Published var name: String
-    @Published var color: DXColor
+    @Published var color: String
 
-    init(oldSector: Int, name: String, color: DXColor) {
+    init(oldSector: Int, name: String, color: String) {
         self.name = name
         self.oldSector = oldSector
         self.newSector = oldSector

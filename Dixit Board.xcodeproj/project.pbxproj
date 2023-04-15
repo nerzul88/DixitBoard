@@ -27,7 +27,7 @@
 		1BE79C1A29E9F07B00529196 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C1829E9F07B00529196 /* SetupViewModel.swift */; };
 		1BE79C2529E9FE5300529196 /* StepPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2429E9FCF500529196 /* StepPickerView.swift */; };
 		1BE79C2629E9FE5800529196 /* StepPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */; };
-		1BE79C2829EAC70100529196 /* Dixit-storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2729EAC70100529196 /* Dixit-storage.swift */; };
+		1BE79C2829EAC70100529196 /* DixitStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2729EAC70100529196 /* DixitStorage.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
 		1BFF4E6629E1AD18007E2A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6529E1AD18007E2A11 /* Preview Assets.xcassets */; };
@@ -39,7 +39,6 @@
 		1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */; };
 		1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */; };
 		1BFF4E8B29E1FAD8007E2A11 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8A29E1FAD8007E2A11 /* Player.swift */; };
-		1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */; };
 		1BFF4E9029E204A8007E2A11 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */; };
 		1BFF4E9629E205D1007E2A11 /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9429E205D1007E2A11 /* BottomBarView.swift */; };
 		1BFF4E9729E205D1007E2A11 /* BottomBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E9529E205D1007E2A11 /* BottomBarViewModel.swift */; };
@@ -67,7 +66,7 @@
 		1BE79C1829E9F07B00529196 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerViewModel.swift; sourceTree = "<group>"; };
 		1BE79C2429E9FCF500529196 /* StepPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerView.swift; sourceTree = "<group>"; };
-		1BE79C2729EAC70100529196 /* Dixit-storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dixit-storage.swift"; sourceTree = "<group>"; };
+		1BE79C2729EAC70100529196 /* DixitStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DixitStorage.swift; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
 		1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1BFF4E8A29E1FAD8007E2A11 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXColor.swift; sourceTree = "<group>"; };
 		1BFF4E8F29E204A8007E2A11 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		1BFF4E9429E205D1007E2A11 /* BottomBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
 		1BFF4E9529E205D1007E2A11 /* BottomBarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBarViewModel.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		1B29C51329E33E740025A624 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1BFF4E8C29E1FBA9007E2A11 /* DXColor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,11 +206,17 @@
 			path = StepPicker;
 			sourceTree = "<group>";
 		};
+		1BE79C2929EAE81800529196 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1BA8EAE329E7D6920093CB02 /* Example.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		1BFF4E5229E1AD17007E2A11 = {
 			isa = PBXGroup;
 			children = (
-				1BE79C2729EAC70100529196 /* Dixit-storage.swift */,
-				1BA8EAE329E7D6920093CB02 /* Example.swift */,
 				1BFF4E5D29E1AD17007E2A11 /* Dixit Board */,
 				1BFF4E5C29E1AD17007E2A11 /* Products */,
 			);
@@ -235,6 +238,7 @@
 				1B29C4F429E20DAC0025A624 /* Scenes */,
 				1B29C51229E33DF10025A624 /* Controls */,
 				1BFF4E7D29E1E8B3007E2A11 /* Views */,
+				1BE79C2929EAE81800529196 /* Others */,
 				1BFF4E6429E1AD18007E2A11 /* Preview Content */,
 			);
 			path = "Dixit Board";
@@ -275,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
+				1BE79C2729EAC70100529196 /* DixitStorage.swift */,
 				1B29C51329E33E740025A624 /* Models */,
 				1BFF4E8E29E2049D007E2A11 /* Extensions */,
 				1B29C50B29E2F9970025A624 /* Constants */,
@@ -391,7 +396,7 @@
 			files = (
 				1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */,
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
-				1BE79C2829EAC70100529196 /* Dixit-storage.swift in Sources */,
+				1BE79C2829EAC70100529196 /* DixitStorage.swift in Sources */,
 				1B29C50929E2F5440025A624 /* PlayingTableViewModel.swift in Sources */,
 				1B005B6529E862E80006FB5A /* MenuViewModel.swift in Sources */,
 				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
@@ -408,7 +413,6 @@
 				1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */,
 				1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */,
 				1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */,
-				1BFF4E8D29E1FBA9007E2A11 /* DXColor.swift in Sources */,
 				1B29C50229E2F02A0025A624 /* TopBarView.swift in Sources */,
 				1B29C51129E3122F0025A624 /* MockData.swift in Sources */,
 				1B29C50329E2F02A0025A624 /* TopBarViewModel.swift in Sources */,

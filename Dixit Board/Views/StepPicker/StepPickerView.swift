@@ -43,7 +43,7 @@ struct StepPickerView: View {
             
             VStack(spacing: 16) {
                 Text("\(Image(systemName: "circle.fill")) \(viewModel.name)")
-                    .foregroundColor(viewModel.color.swiftUIColor)
+                    .foregroundColor(Color(viewModel.color))
                     .font(.system(size: 36))
                     .bold()
                 
@@ -93,7 +93,7 @@ struct StepPickerView: View {
 
 struct Examplexfsfv_Preview: PreviewProvider {
     static var previews: some View {
-        StepPickerView(viewModel: .init(oldSector: 3, name: "TEST", color: .init(color: Color.blue)), showPicker: .constant(true))
+        StepPickerView(viewModel: .init(oldSector: 3, name: "TEST", color: .init(Colors.color_0)), showPicker: .constant(true))
         
     }
 }

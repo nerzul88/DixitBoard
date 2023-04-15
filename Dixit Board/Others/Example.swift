@@ -2,7 +2,7 @@
 //  Example.swift
 //  Dixit Board
 //
-//  Created by Андрей Рыбалкин on 13.04.2023.
+//  Created by Aleksandr Kasianov on 13.04.2023.
 //
 
 import SwiftUI

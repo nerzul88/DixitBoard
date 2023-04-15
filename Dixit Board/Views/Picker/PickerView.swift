@@ -42,7 +42,24 @@ struct PickerView: View {
                 )
             
             VStack {
-                HStack {
+                
+                ZStack {
+                    
+                    HStack {
+                        
+                        Spacer()
+                        
+                        Button {
+                            showPicker.toggle()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color(Colors.actor))
+                        }
+                        .padding(.horizontal)
+                    }
+
                     Text("Введите имя")
                         .foregroundColor(Color(Colors.actor))
                         .font(.title)
@@ -57,6 +74,7 @@ struct PickerView: View {
                     
                     Rectangle()
                         .frame(height: 2)
+                        .foregroundColor(Color(Colors.actor))
                 }
                 
                 Text("Выберите цвет")
@@ -67,10 +85,9 @@ struct PickerView: View {
 
 
                 Picker("", selection: $viewModel.newPlayerColor) {
-                    ForEach(0..<10) { index in
-                        let color = Storage.shared.colors[index]
-                        Text("\(Image(systemName: "circle.fill"))").tag(color.swiftUIColor)
-                            .foregroundColor(color.swiftUIColor)
+                    ForEach(viewModel.avaiableColors, id: \.self) { color in
+                        Text("\(Image(systemName: "circle.fill"))").tag(color)
+                            .foregroundColor(Color(color))
                         }
                     }
                 .pickerStyle(.wheel)
@@ -84,7 +101,7 @@ struct PickerView: View {
                         onAddPlayerBlock? (
                             Player(
                                 name: viewModel.newPlayerName,
-                                color: .init(color: viewModel.newPlayerColor),
+                                color: viewModel.newPlayerColor,
                                 number: viewModel.expectedNumber,
                                 sector: 0,
                                 position: .zero)
@@ -114,7 +131,7 @@ struct PickerView: View {
 
 struct Examplesfv_Preview: PreviewProvider {
     static var previews: some View {
-        PickerView(viewModel: .init(expectedNumber: 1), showPicker: .constant(true))
+        PickerView(viewModel: .init(expectedNumber: 1, avaiableColors: Storage.shared.colors), showPicker: .constant(true))
         
     }
 }

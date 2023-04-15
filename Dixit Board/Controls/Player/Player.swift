@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 
 struct Player: Equatable {
     
@@ -19,14 +18,14 @@ struct Player: Equatable {
     }
     
     var name: String
-    var color: DXColor
+    var color: String
     var number: Int
     var sector: Int
     var position: CGPoint
     
     init(
         name: String,
-        color: DXColor,
+        color: String,
         number: Int,
         sector: Int,
         position: CGPoint

@@ -28,7 +28,7 @@ struct PlayingTableView: View {
     @ViewBuilder private var stepView: some View {
         ZStack {
             Capsule()
-                .foregroundColor(viewModel.currentPlayer?.color.swiftUIColor)
+                .foregroundColor(Color(viewModel.currentPlayer?.color ?? ""))
             Text("Step of player \(viewModel.currentPlayer?.number ?? 0)".uppercased())
                 .foregroundColor(.white)
                 .font(.system(size: 25, weight: .bold, design: .default))

@@ -25,7 +25,7 @@ struct PlayerView: View {
             HStack {
                 ZStack {
                     Circle()
-                        .foregroundColor(viewModel.player.color.swiftUIColor)
+                        .foregroundColor(Color(viewModel.player.color))
                         .addBorder(Color(Colors.main), width: 2, cornerRadius: 25)
                     Text("\(viewModel.player.number)")
                         .font(.system(size: 25, weight: .bold, design: .default))
