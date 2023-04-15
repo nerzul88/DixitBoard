@@ -2,7 +2,7 @@
 //  Size.swift
 //  Dixit Board
 //
-//  Created by Андрей Рыбалкин on 09.04.2023.
+//  Created by Aleksandr Kasianov on 09.04.2023.
 //
 
 import Foundation

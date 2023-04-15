@@ -17,6 +17,8 @@ struct MenuView: View {
     @State var showMenu = true
     @State var showSettings = false
     
+    @State var showGame = false
+    
     // MARK: -
     
     init(viewModel: MenuViewModel = .init()) {
@@ -28,6 +30,9 @@ struct MenuView: View {
         VStack {
             
             MenuButtonView(viewModel: .init(title: "Новая игра")) {
+                
+                viewModel.players.removeAll()
+                
                 withAnimation {
                     showSettings.toggle()
                 }
@@ -88,8 +93,12 @@ struct MenuView: View {
                 .blur(radius: showSettings ? 25 : 0)
             
             if showSettings {
-                SetupView(showSetup: $showSettings)
+                SetupView(viewModel: .init(players: $viewModel.players), showSetup: $showSettings, showGame: $showGame)
                     .background(Color.black.opacity(showSettings ? 0.5 : 0))
+            }
+            
+            if showGame {
+                GameView(viewModel: .init(players: viewModel.players), showGame: $showGame)
             }
         }
     }

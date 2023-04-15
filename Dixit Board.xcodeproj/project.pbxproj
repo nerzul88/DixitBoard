@@ -28,6 +28,7 @@
 		1BE79C2529E9FE5300529196 /* StepPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2429E9FCF500529196 /* StepPickerView.swift */; };
 		1BE79C2629E9FE5800529196 /* StepPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */; };
 		1BE79C2829EAC70100529196 /* DixitStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2729EAC70100529196 /* DixitStorage.swift */; };
+		1BE79C2B29EB37B300529196 /* WinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2A29EB37B300529196 /* WinnerView.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
 		1BFF4E6629E1AD18007E2A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6529E1AD18007E2A11 /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerViewModel.swift; sourceTree = "<group>"; };
 		1BE79C2429E9FCF500529196 /* StepPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerView.swift; sourceTree = "<group>"; };
 		1BE79C2729EAC70100529196 /* DixitStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DixitStorage.swift; sourceTree = "<group>"; };
+		1BE79C2A29EB37B300529196 /* WinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerView.swift; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
 		1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				1BE79C0829E9ED4200529196 /* Picker */,
 				1BFF4E7E29E1E8C1007E2A11 /* Triangle.swift */,
 				1BFF4E7029E1C2D3007E2A11 /* StackedCircles.swift */,
+				1BE79C2A29EB37B300529196 /* WinnerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE79C2B29EB37B300529196 /* WinnerView.swift in Sources */,
 				1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */,
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
 				1BE79C2829EAC70100529196 /* DixitStorage.swift in Sources */,

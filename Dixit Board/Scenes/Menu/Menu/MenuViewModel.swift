@@ -8,7 +8,7 @@ class MenuViewModel: ObservableObject {
     
     // MARK: - Internal published var
     
-
+    @Published var players: [Player] = []
     
     // TODO: -
     

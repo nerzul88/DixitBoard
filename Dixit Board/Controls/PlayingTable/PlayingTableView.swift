@@ -28,9 +28,10 @@ struct PlayingTableView: View {
     @ViewBuilder private var stepView: some View {
         ZStack {
             Capsule()
-                .foregroundColor(Color(viewModel.currentPlayer?.color ?? ""))
-            Text("Step of player \(viewModel.currentPlayer?.number ?? 0)".uppercased())
-                .foregroundColor(.white)
+                .foregroundColor(Color(Colors.actor))
+                .addBorder(Color(Colors.main), cornerRadius: 30)
+            Text("Ход игрока \(viewModel.currentPlayer?.number ?? 0)".uppercased())
+                .foregroundColor(Color(Colors.main))
                 .font(.system(size: 25, weight: .bold, design: .default))
                 .padding(.horizontal)
                 .scaledToFill()

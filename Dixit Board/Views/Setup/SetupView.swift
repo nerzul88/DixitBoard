@@ -17,19 +17,28 @@ struct SetupView: View {
     // MARK: -
     
     @State var showPicker = false
+    @State var canAddPlayers = true
+    @State var canStartGame = false
     
     // MARK: -
     
     @Binding var showSetup: Bool
+    @Binding var showGame: Bool
 
     // MARK: -
     
-    init(viewModel: SetupViewModel = .init(), showSetup: Binding<Bool>) {
+    init(
+        viewModel: SetupViewModel,
+        showSetup: Binding<Bool>,
+        showGame: Binding<Bool>
+    ) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
         self._showSetup = showSetup
+        self._showGame = showGame
     }
     
-    
+    // MARK: -
+
     @ViewBuilder private var setupView: some View {
         
         ZStack {
@@ -49,11 +58,10 @@ struct SetupView: View {
                         Button {
                             showSetup.toggle()
                         } label: {
-                            Image(systemName: "plus")
+                            Image(systemName: "xmark")
                                 .resizable()
                                 .foregroundColor(Color(Colors.actor))
                                 .frame(width: 32, height: 32)
-                                .rotationEffect(.degrees(45))
                         }
                     }
                     .padding(.horizontal)
@@ -95,14 +103,21 @@ struct SetupView: View {
                         showPicker.toggle()
                     }
                 }
-                .disabled(!viewModel.canAddPlayers)
-                .opacity(viewModel.canAddPlayers ? 1 : 0.5)
+                .disabled(!canAddPlayers)
+                .opacity(canAddPlayers ? 1 : 0.5)
 
                 MenuButtonView(viewModel: .init(title: "Начать игру")) {
-                    //empty.
+                    
+                    withAnimation() {
+                        showGame.toggle()
+                    }
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        showSetup.toggle()
+                    }
+                    
                 }
-                .disabled(!viewModel.canStartGame)
-                .opacity(viewModel.canStartGame ? 1 : 0.5)
+                .disabled(!canStartGame)
+                .opacity(canStartGame ? 1 : 0.5)
                 
             }
             
@@ -121,6 +136,10 @@ struct SetupView: View {
     var body: some View {
         ZStack {
             setupView
+                .onChange(of: viewModel.players) { players in
+                    canAddPlayers = players.count < 10
+                    canStartGame = players.count >= 3
+                }
             
             if showPicker {
                 PickerView(viewModel: .init(expectedNumber: viewModel.players.count + 1, avaiableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
@@ -135,6 +154,6 @@ struct SetupView: View {
 
 struct Exampleqev_Preview: PreviewProvider {
     static var previews: some View {
-        SetupView(viewModel: .init(), showSetup: .constant(true) )
+        SetupView(viewModel: .init(players: .constant([])), showSetup: .constant(true), showGame: .constant(false) )
     }
 }

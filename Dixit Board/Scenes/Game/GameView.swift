@@ -13,11 +13,19 @@ struct GameView: View {
     // MARK: -
 
     @State var showStepPicker: Bool = false
+    @State var showWinner: Bool = false
+    
+    @State var winnerName: String = "Игрок"
+
+    // MARK: -
+
+    @Binding var showGame: Bool
 
     // MARK: - Internal init
     
-    init(viewModel: GameViewModel) {
+    init(viewModel: GameViewModel, showGame: Binding<Bool>) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
+        self._showGame = showGame
     }
     
     // MARK: - ViewBuilder var
@@ -28,7 +36,7 @@ struct GameView: View {
             TopBarView(viewModel: .init(onTapMenu: {
                 ()
             }, onTapClose: {
-                ()
+                showGame.toggle()
             }) )
             
             PlayingTableView(viewModel: .init(players: $viewModel.players) )
@@ -68,10 +76,28 @@ struct GameView: View {
                     
                     let player = viewModel.players[index]
                     
-                    StepPickerView(viewModel: .init(oldSector: player.sector, name: player.name, color: player.color), showPicker: $showStepPicker) { sector in
-                        
-                        viewModel.players[index].sector = sector
-                        
+                    StepPickerView(viewModel: .init(oldSector: player.sector, name: player.name, color: player.color, playersCount: viewModel.players.count), showPicker: $showStepPicker) { count in
+                        viewModel.makeMove(count, for: index) { name in
+                            winnerName = name
+                            showWinner.toggle()
+                        }
+                    }
+                    .background(Color.black.opacity(showStepPicker ? 0.5 : 0))
+
+                }
+            }
+            
+            if showWinner {
+                WinnerView(name: winnerName, showWinner: $showWinner) { mode in
+                    switch mode {
+                    case .new:
+                        viewModel.setNewGame()
+                        showWinner.toggle()
+                    case .close:
+                        showWinner.toggle()
+                        showGame.toggle()
+                    case .counitue:
+                        showWinner.toggle()
                     }
                 }
             }
@@ -82,6 +108,6 @@ struct GameView: View {
 
 struct Example_Preview: PreviewProvider {
     static var previews: some View {
-        GameView(viewModel: .init(players: MockData.players))
+        GameView(viewModel: .init(players: MockData.players), showGame: .constant(true))
     }
 }
