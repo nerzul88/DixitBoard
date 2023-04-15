@@ -8,6 +8,13 @@ class GameViewModel: ObservableObject {
     
     // MARK: - Internal published var
     
-    @Published var players = MockData.players
+    @Published var players: [Player]
+    @Published var selectedPlayerIndex: Int?
     
+    // MARK: -
+
+    init(players: [Player]) {
+        self.players = players
+    }
+
 }

@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-final class DXColor {
+final class DXColor: Equatable {
+    
+    static func == (lhs: DXColor, rhs: DXColor) -> Bool {
+        return lhs.red == rhs.red &&
+        lhs.green == rhs.green &&
+        lhs.blue == rhs.blue &&
+        lhs.alpha == rhs.alpha
+    }
+        
     var red: CGFloat
     var green: CGFloat
     var blue: CGFloat

@@ -59,13 +59,16 @@ struct PickerView: View {
                         .frame(height: 2)
                 }
                 
-                ColorPicker(selection: $viewModel.newPlayerColor) {
-                    Text("Цвет игрока")
-                        .foregroundColor(Color("actor"))
-                        .font(.title)
-                        .bold()
-                }
-                .padding(.vertical)
+                Picker("", selection: $viewModel.newPlayerColor) {
+                    ForEach(0..<10) { index in
+                        let color = Storage.shared.colors[index]
+                        Text("\(Image(systemName: "circle.fill"))").tag(color.swiftUIColor)
+                            .foregroundColor(color.swiftUIColor)
+                        }
+                    }
+                .pickerStyle(.wheel)
+                .frame(height: 100)
+                    .scaledToFit()
                 
                 MenuButtonView(viewModel: .init(title: "Готово"), handler: {
                     
@@ -74,7 +77,8 @@ struct PickerView: View {
                         onAddPlayerBlock? (
                             Player(
                                 name: viewModel.newPlayerName,
-                                color: .init(color: .init(viewModel.newPlayerColor)),
+                                color: .init(color: viewModel.newPlayerColor),
+//                                color: .init(color: .init(viewModel.newPlayerColor!)),
                                 number: viewModel.expectedNumber,
                                 sector: 0,
                                 position: .zero)

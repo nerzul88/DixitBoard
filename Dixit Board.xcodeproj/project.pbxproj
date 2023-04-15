@@ -25,6 +25,9 @@
 		1BE79C1329E9EDFF00529196 /* MenuButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C1129E9EDFF00529196 /* MenuButtonViewModel.swift */; };
 		1BE79C1929E9F07B00529196 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C1729E9F07B00529196 /* SetupView.swift */; };
 		1BE79C1A29E9F07B00529196 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C1829E9F07B00529196 /* SetupViewModel.swift */; };
+		1BE79C2529E9FE5300529196 /* StepPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2429E9FCF500529196 /* StepPickerView.swift */; };
+		1BE79C2629E9FE5800529196 /* StepPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */; };
+		1BE79C2829EAC70100529196 /* Dixit-storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE79C2729EAC70100529196 /* Dixit-storage.swift */; };
 		1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */; };
 		1BFF4E6329E1AD18007E2A11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */; };
 		1BFF4E6629E1AD18007E2A11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BFF4E6529E1AD18007E2A11 /* Preview Assets.xcassets */; };
@@ -62,6 +65,9 @@
 		1BE79C1129E9EDFF00529196 /* MenuButtonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuButtonViewModel.swift; sourceTree = "<group>"; };
 		1BE79C1729E9F07B00529196 /* SetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		1BE79C1829E9F07B00529196 /* SetupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerViewModel.swift; sourceTree = "<group>"; };
+		1BE79C2429E9FCF500529196 /* StepPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepPickerView.swift; sourceTree = "<group>"; };
+		1BE79C2729EAC70100529196 /* Dixit-storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dixit-storage.swift"; sourceTree = "<group>"; };
 		1BFF4E5B29E1AD17007E2A11 /* Dixit Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dixit Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dixit_BoardApp.swift; sourceTree = "<group>"; };
 		1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,9 +200,19 @@
 			path = Setup;
 			sourceTree = "<group>";
 		};
+		1BE79C2229E9FCEA00529196 /* StepPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1BE79C2429E9FCF500529196 /* StepPickerView.swift */,
+				1BE79C2329E9FCF500529196 /* StepPickerViewModel.swift */,
+			);
+			path = StepPicker;
+			sourceTree = "<group>";
+		};
 		1BFF4E5229E1AD17007E2A11 = {
 			isa = PBXGroup;
 			children = (
+				1BE79C2729EAC70100529196 /* Dixit-storage.swift */,
 				1BA8EAE329E7D6920093CB02 /* Example.swift */,
 				1BFF4E5D29E1AD17007E2A11 /* Dixit Board */,
 				1BFF4E5C29E1AD17007E2A11 /* Products */,
@@ -245,6 +261,7 @@
 		1BFF4E7D29E1E8B3007E2A11 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BE79C2229E9FCEA00529196 /* StepPicker */,
 				1BE79C1629E9F07B00529196 /* Setup */,
 				1BE79C0F29E9EDFF00529196 /* MenuButton */,
 				1BE79C0829E9ED4200529196 /* Picker */,
@@ -374,6 +391,7 @@
 			files = (
 				1BFF4E8929E1FA53007E2A11 /* PlayerView.swift in Sources */,
 				1BFF4E7C29E1E83A007E2A11 /* SectorViewModel.swift in Sources */,
+				1BE79C2829EAC70100529196 /* Dixit-storage.swift in Sources */,
 				1B29C50929E2F5440025A624 /* PlayingTableViewModel.swift in Sources */,
 				1B005B6529E862E80006FB5A /* MenuViewModel.swift in Sources */,
 				1BFF4E8829E1FA53007E2A11 /* PlayerViewModel.swift in Sources */,
@@ -382,9 +400,11 @@
 				1BE79C1329E9EDFF00529196 /* MenuButtonViewModel.swift in Sources */,
 				1B005B6629E862E80006FB5A /* MenuView.swift in Sources */,
 				1BE79C1229E9EDFF00529196 /* MenuButtonView.swift in Sources */,
+				1BE79C2629E9FE5800529196 /* StepPickerViewModel.swift in Sources */,
 				1BE79C1929E9F07B00529196 /* SetupView.swift in Sources */,
 				1B29C50F29E311210025A624 /* Size.swift in Sources */,
 				1BE79C1A29E9F07B00529196 /* SetupViewModel.swift in Sources */,
+				1BE79C2529E9FE5300529196 /* StepPickerView.swift in Sources */,
 				1BFF4E5F29E1AD17007E2A11 /* Dixit_BoardApp.swift in Sources */,
 				1B29C4FB29E2134F0025A624 /* GameViewModel.swift in Sources */,
 				1BFF4E7F29E1E8C1007E2A11 /* Triangle.swift in Sources */,

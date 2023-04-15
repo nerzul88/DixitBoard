@@ -8,7 +8,15 @@
 import Foundation
 import SwiftUI
 
-struct Player {
+struct Player: Equatable {
+    
+    static func == (lhs: Player, rhs: Player) -> Bool {
+        return lhs.name == rhs.name &&
+        lhs.color == rhs.color &&
+        lhs.number == rhs.number &&
+        lhs.sector == rhs.sector &&
+        lhs.position == rhs.position
+    }
     
     var name: String
     var color: DXColor

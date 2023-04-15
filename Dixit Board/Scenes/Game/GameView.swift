@@ -10,6 +10,10 @@ struct GameView: View {
     
     @ObservedObject var viewModel: GameViewModel
     
+    // MARK: -
+
+    @State var showStepPicker: Bool = false
+
     // MARK: - Internal init
     
     init(viewModel: GameViewModel) {
@@ -29,7 +33,10 @@ struct GameView: View {
             
             PlayingTableView(viewModel: .init(players: $viewModel.players) )
             
-            BottomBarView(viewModel: .init(players: $viewModel.players))
+            BottomBarView(viewModel: .init(players: viewModel.players)) { index in
+                viewModel.selectedPlayerIndex = index
+                showStepPicker.toggle()
+            }
             
         }
         .ignoresSafeArea()
@@ -38,13 +45,28 @@ struct GameView: View {
     // MARK: - body
     
     var body: some View {
-        mainView
+        ZStack {
+            mainView
+            
+            if showStepPicker {
+                if let index = viewModel.selectedPlayerIndex {
+                    
+                    let player = viewModel.players[index]
+                    
+                    StepPickerView(viewModel: .init(oldSector: player.sector, name: player.name, color: player.color), showPicker: $showStepPicker) { sector in
+                        
+                        viewModel.players[index].sector = sector
+                        
+                    }
+                }
+            }
+        }
     }
 }
 // MARK: -
 
 struct Example_Preview: PreviewProvider {
     static var previews: some View {
-        GameView(viewModel: .init())
+        GameView(viewModel: .init(players: MockData.players))
     }
 }
