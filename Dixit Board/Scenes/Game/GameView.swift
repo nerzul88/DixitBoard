@@ -14,7 +14,8 @@ struct GameView: View {
 
     @State var showStepPicker: Bool = false
     @State var showWinner: Bool = false
-    
+    @State var showOver: Bool = false
+
     @State var winnerName: String = "Игрок"
 
     // MARK: -
@@ -95,12 +96,27 @@ struct GameView: View {
                         showWinner.toggle()
                     case .close:
                         showWinner.toggle()
-                        showGame.toggle()
+                        showOver.toggle()
                     case .counitue:
                         showWinner.toggle()
                     }
                 }
             }
+            
+            if showOver {
+                GameOverView(names: viewModel.getWinners(), showGameOver: $showOver) { mode in
+                    switch mode {
+                    case .new:
+                        viewModel.setNewGame()
+                        showOver.toggle()
+                    case .close:
+                        showOver.toggle()
+                        showGame.toggle()
+                    default: return
+                    }
+                }
+            }
+
         }
     }
 }

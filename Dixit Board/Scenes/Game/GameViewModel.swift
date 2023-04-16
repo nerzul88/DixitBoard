@@ -25,6 +25,7 @@ class GameViewModel: ObservableObject {
         
         if newSector > 30 {
             players[index].sector = newSector > 30 ? newSector - 31 : newSector
+            players[index].isWon = true
             lapHandler(players[index].name)
         } else {
             players[index].sector = newSector
@@ -33,6 +34,10 @@ class GameViewModel: ObservableObject {
     
     func setNewGame() {
         players.indices.forEach { players[$0].sector = 0 }
+    }
+    
+    func getWinners() -> [String] {
+        return players.filter { $0.isWon }.map { $0.name }
     }
 
 }

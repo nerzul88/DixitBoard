@@ -14,7 +14,8 @@ struct Player: Equatable {
         lhs.color == rhs.color &&
         lhs.number == rhs.number &&
         lhs.sector == rhs.sector &&
-        lhs.position == rhs.position
+        lhs.position == rhs.position &&
+        lhs.isWon == rhs.isWon
     }
     
     var name: String
@@ -22,6 +23,7 @@ struct Player: Equatable {
     var number: Int
     var sector: Int
     var position: CGPoint
+    var isWon: Bool = false
     
     init(
         name: String,
