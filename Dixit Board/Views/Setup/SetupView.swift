@@ -80,10 +80,26 @@ struct SetupView: View {
                     ForEach(Array(viewModel.players.enumerated()), id: \.element.number) { index, player in
                         
                         HStack {
-                            PlayerView(viewModel: .init(player: player))
-                                .scaledToFit()
+                            
+                            ZStack {
+                                
+                                Circle()
+                                    .foregroundColor(Color(player.color))
+                                    .addBorder(Color(Colors.actor), width: 2, cornerRadius: 25)
+                                    .frame(width: 50
+                                    )
+                                
+                                Text("\(index + 1)")
+                                    .font(.system(size: 25, weight: .bold, design: .default))
+                                    .foregroundColor(Color(Colors.actor))
+                            }
+
+                            Text("\(player.name.uppercased())")
+                                .font(.system(size: 25, weight: .bold, design: .default))
+                                .foregroundColor(Color(Colors.actor))
                             
                             Spacer()
+                            
                             Button {
                                     viewModel.players.remove(at: index)
                             } label: {
@@ -93,6 +109,7 @@ struct SetupView: View {
                                     .foregroundColor(Color(Colors.actor))
                             }
                         }
+                        .padding(.horizontal, 16)
                     }
                 }
                 
@@ -142,7 +159,10 @@ struct SetupView: View {
                 }
             
             if showPicker {
-                PickerView(viewModel: .init(expectedNumber: viewModel.players.count + 1, avaiableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
+                
+                let expected = (viewModel.players.last?.number ?? 0) + 1
+                
+                PickerView(viewModel: .init(expectedNumber: expected, avaiableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
                     viewModel.players.append(player)
                 })
                     .frame(maxHeight: .infinity)

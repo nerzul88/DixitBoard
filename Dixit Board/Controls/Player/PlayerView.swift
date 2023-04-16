@@ -27,7 +27,7 @@ struct PlayerView: View {
                     Circle()
                         .foregroundColor(Color(viewModel.player.color))
                         .addBorder(Color(Colors.main), width: 2, cornerRadius: 25)
-                    Text("\(viewModel.player.number)")
+                    Text("\(viewModel.player.sector)")
                         .font(.system(size: 25, weight: .bold, design: .default))
                         .foregroundColor(Color(Colors.actor))
                 }

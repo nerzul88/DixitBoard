@@ -30,7 +30,7 @@ struct PlayingTableView: View {
             Capsule()
                 .foregroundColor(Color(Colors.actor))
                 .addBorder(Color(Colors.main), cornerRadius: 30)
-            Text("Ход игрока \(viewModel.currentPlayer?.number ?? 0)".uppercased())
+            Text("Ход игрока 1".uppercased())
                 .foregroundColor(Color(Colors.main))
                 .font(.system(size: 25, weight: .bold, design: .default))
                 .padding(.horizontal)
