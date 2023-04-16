@@ -97,10 +97,3 @@ struct GameOverView: View {
         .ignoresSafeArea()
     }
 }
-
-struct Examplexafsffav_Preview: PreviewProvider {
-    static var previews: some View {
-        
-        GameOverView(names: ["Андрей", "Николай"], showGameOver: .constant(true))
-    }
-}

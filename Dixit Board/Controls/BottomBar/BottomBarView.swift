@@ -64,9 +64,3 @@ struct BottomBarView: View {
             .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: -10)
     }
 }
-
-struct Exampldede_Preview: PreviewProvider {
-    static var previews: some View {
-        BottomBarView(viewModel: .init(players: MockData.players))
-    }
-}

@@ -128,10 +128,3 @@ struct PickerView: View {
             .padding()
     }
 }
-
-struct Examplesfv_Preview: PreviewProvider {
-    static var previews: some View {
-        PickerView(viewModel: .init(expectedNumber: 1, avaiableColors: Storage.shared.colors), showPicker: .constant(true))
-        
-    }
-}

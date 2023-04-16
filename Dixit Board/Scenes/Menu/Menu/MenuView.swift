@@ -103,9 +103,3 @@ struct MenuView: View {
         }
     }
 }
-
-struct Examplezx_Preview: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}

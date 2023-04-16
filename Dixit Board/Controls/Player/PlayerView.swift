@@ -51,9 +51,3 @@ struct PlayerView: View {
         
     }
 }
-
-struct Examplezxq_Preview: PreviewProvider {
-    static var previews: some View {
-        PlayerView(viewModel: .init(player: MockData.players[7]))
-    }
-}

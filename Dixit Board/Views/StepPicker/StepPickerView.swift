@@ -96,23 +96,3 @@ struct StepPickerView: View {
         .ignoresSafeArea()
     }
 }
-
-struct Examplexfsfv_Preview: PreviewProvider {
-    static var previews: some View {
-        
-        ZStack {
-            GeometryReader { proxy in
-                Image("wild")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(
-                    width: proxy.size.width,
-                    height: proxy.size.height
-                )
-            }
-
-            StepPickerView(viewModel: .init(oldSector: 3, name: "TEST", color: .init(Colors.color_0), playersCount: 3), showPicker: .constant(true))
-        }
-        
-    }
-}

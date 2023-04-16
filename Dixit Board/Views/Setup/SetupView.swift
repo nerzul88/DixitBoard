@@ -171,9 +171,3 @@ struct SetupView: View {
         }
     }
 }
-
-struct Exampleqev_Preview: PreviewProvider {
-    static var previews: some View {
-        SetupView(viewModel: .init(players: .constant([])), showSetup: .constant(true), showGame: .constant(false) )
-    }
-}

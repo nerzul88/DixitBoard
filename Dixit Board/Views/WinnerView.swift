@@ -97,10 +97,3 @@ struct WinnerView: View {
         .ignoresSafeArea()
     }
 }
-
-struct Examplexfsffav_Preview: PreviewProvider {
-    static var previews: some View {
-        
-        WinnerView(name: "Андрей", showWinner: .constant(true))
-    }
-}

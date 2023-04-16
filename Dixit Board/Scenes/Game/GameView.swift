@@ -120,10 +120,3 @@ struct GameView: View {
         }
     }
 }
-// MARK: -
-
-struct Example_Preview: PreviewProvider {
-    static var previews: some View {
-        GameView(viewModel: .init(players: MockData.players), showGame: .constant(true))
-    }
-}
