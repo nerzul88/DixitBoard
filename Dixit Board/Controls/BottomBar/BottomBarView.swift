@@ -60,7 +60,7 @@ struct BottomBarView: View {
     
     var body: some View {
         players
-            .frame(height: 180)
             .shadow(color: .black.opacity(0.15), radius: 10, x: 0, y: -10)
+            .scaledToFit()
     }
 }

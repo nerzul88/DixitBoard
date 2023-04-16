@@ -24,7 +24,7 @@ struct SectorView: View {
                 Circle()
                     .fill(viewModel.sector.isInitial ? Color(Colors.actorSecondary) : Color(Colors.actor) )
                     .frame(width: viewModel.sector.circleRadius * 2, height: viewModel.sector.circleRadius * 2)
-                    .addBorder(Color(Colors.main), cornerRadius: 30)
+                    .addBorder(Color(Colors.main), cornerRadius: viewModel.sector.circleRadius)
 
                 Text("\(viewModel.sector.number)")
                     .font(.system(size: 25, weight: viewModel.sector.isInitial ? .bold : .regular, design: .default))
@@ -32,7 +32,7 @@ struct SectorView: View {
                 
                 Triangle()
                     .fill(Color(Colors.main))
-                    .frame(width: viewModel.sector.circleRadius/2.75, height: viewModel.sector.circleRadius/2.75)
+                    .frame(width: Sizes.arrowSize, height: Sizes.arrowSize)
                     .offset(x: 0, y: -(viewModel.sector.circleRadius + viewModel.sector.arrowMargin + viewModel.sector.circleRadius / 4))
                     .rotationEffect(Angle(degrees: viewModel.sector.arrowDirection.rawValue))
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2)

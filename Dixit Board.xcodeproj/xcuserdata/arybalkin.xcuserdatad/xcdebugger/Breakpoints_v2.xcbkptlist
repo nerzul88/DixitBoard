@@ -135,16 +135,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F10030AA-3E3D-4DBD-A58A-8DED9FCA0997"
-            shouldBeEnabled = "Yes"
+            uuid = "4D764BBC-21C3-4F29-8FE0-AC8BC7CB77C7"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Dixit Board/Controls/BottomBar/BottomBarView.swift"
+            filePath = "Dixit Board/Controls/PlayingTable/PlayingTableView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "body"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "mainView"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "809DBB30-0322-45DE-90E3-35D30F418591"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dixit Board/Controls/PlayingTable/PlayingTableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "mainView"
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
