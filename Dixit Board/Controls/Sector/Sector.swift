@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: -
+
 enum Direction: Double {
     case up = 0.0
     case right = 90.0
@@ -17,6 +19,8 @@ enum Direction: Double {
     case leftDown = 225.0
     case rightDown = 135.0
 }
+
+// MARK: -
 
 struct Sector {
     

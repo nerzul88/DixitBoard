@@ -12,7 +12,6 @@ struct Dixit_BoardApp: App {
     var body: some Scene {
         WindowGroup {
             MenuView()
-//            GameView(viewModel: .init(players: MockData.players), showGame: .constant(true))
         }
     }
 }

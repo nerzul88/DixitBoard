@@ -9,15 +9,24 @@ import SwiftUI
 
 struct StackedCircles: View {
     
+    // MARK: -
+
     @Binding var players: [Player]
+    
+    // MARK: -
+
     @State var size: CGFloat
     @State var sector: Int
+    
+    // MARK: -
     
     init(players: Binding<[Player]>, size: CGFloat, sector: Int) {
         self._players = players
         self.size = size
         self.sector = sector
     }
+    
+    // MARK: -
 
     var body: some View {
         ZStack {

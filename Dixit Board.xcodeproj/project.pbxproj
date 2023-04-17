@@ -103,8 +103,8 @@
 		1B005B6229E862E80006FB5A /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				1B005B6329E862E80006FB5A /* MenuViewModel.swift */,
 				1B005B6429E862E80006FB5A /* MenuView.swift */,
+				1B005B6329E862E80006FB5A /* MenuViewModel.swift */,
 			);
 			name = Menu;
 			path = Menu/Menu;
@@ -140,8 +140,8 @@
 		1B29C50629E2F5440025A624 /* PlayingTable */ = {
 			isa = PBXGroup;
 			children = (
-				1B29C50729E2F5440025A624 /* PlayingTableViewModel.swift */,
 				1B29C50829E2F5440025A624 /* PlayingTableView.swift */,
+				1B29C50729E2F5440025A624 /* PlayingTableViewModel.swift */,
 			);
 			path = PlayingTable;
 			sourceTree = "<group>";
@@ -165,13 +165,6 @@
 				1B29C50629E2F5440025A624 /* PlayingTable */,
 			);
 			path = Controls;
-			sourceTree = "<group>";
-		};
-		1B29C51329E33E740025A624 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1BE79C0829E9ED4200529196 /* Picker */ = {
@@ -286,7 +279,6 @@
 			children = (
 				1BFF4E5E29E1AD17007E2A11 /* Dixit_BoardApp.swift */,
 				1BE79C2729EAC70100529196 /* DixitStorage.swift */,
-				1B29C51329E33E740025A624 /* Models */,
 				1BFF4E8E29E2049D007E2A11 /* Extensions */,
 				1B29C50B29E2F9970025A624 /* Constants */,
 				1BFF4E6229E1AD18007E2A11 /* Assets.xcassets */,
@@ -297,8 +289,8 @@
 		1BFF4E8529E1FA53007E2A11 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */,
 				1BFF4E8729E1FA53007E2A11 /* PlayerView.swift */,
+				1BFF4E8629E1FA53007E2A11 /* PlayerViewModel.swift */,
 				1BFF4E8A29E1FAD8007E2A11 /* Player.swift */,
 			);
 			path = Player;

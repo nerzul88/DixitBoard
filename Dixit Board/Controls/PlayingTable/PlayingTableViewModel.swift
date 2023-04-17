@@ -23,7 +23,7 @@ class PlayingTableViewModel: ObservableObject {
         currentPlayer = players[index]
     }
     
-    // Arrow direction calculating
+    /// Arrow direction calculating
     func getDirection(_ row: Int, _ column: Int) -> Direction {
         
         return column == 0
@@ -41,7 +41,7 @@ class PlayingTableViewModel: ObservableObject {
     }
     
     
-    // Sector number calculating
+    /// Sector number calculating
     func getNumber(_ row: Int, _ column: Int) -> Int {
         
         var cellNum = 0

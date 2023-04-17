@@ -8,10 +8,6 @@ struct MenuButtonView: View {
     
     // MARK: -
     
-    @Environment(\.dismiss) var dismiss
-    
-    // MARK: -
-    
     @ObservedObject var viewModel: MenuButtonViewModel
     
     // MARK: -

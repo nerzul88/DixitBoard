@@ -6,17 +6,17 @@ import SwiftUI
 
 struct TopBarView: View {
     
-    // MARK: - Internal state object var
+    // MARK: -
     
     @ObservedObject var viewModel: TopBarViewModel
     
-    // MARK: - Internal init
+    // MARK: -
     
     init(viewModel: TopBarViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
-    // MARK: - Internal var
+    // MARK: - 
         
     @ViewBuilder private var topBar: some View {
         

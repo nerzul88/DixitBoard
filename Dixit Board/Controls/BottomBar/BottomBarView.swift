@@ -6,11 +6,11 @@ import SwiftUI
 
 struct BottomBarView: View {
     
-    // MARK: - Internal state object var
+    // MARK: -
     
     @ObservedObject var viewModel: BottomBarViewModel
     
-    // MARK: - Internal init
+    // MARK: -
     
     init(viewModel: BottomBarViewModel, onSelectPlayerBlock: ((Int) -> Void)? = nil) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
@@ -21,7 +21,7 @@ struct BottomBarView: View {
 
     var onSelectPlayerBlock: ((Int) -> Void)?
     
-    // MARK: - Internal var
+    // MARK: -
     
     @ViewBuilder private var players: some View {
         ZStack {
@@ -57,6 +57,7 @@ struct BottomBarView: View {
         }
     }
     
+    // MARK: -
     
     var body: some View {
         players

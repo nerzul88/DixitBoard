@@ -8,10 +8,6 @@ struct PickerView: View {
     
     // MARK: -
     
-    @Environment(\.dismiss) var dismiss
-    
-    // MARK: -
-    
     @ObservedObject var viewModel: PickerViewModel
     
     // MARK: -
@@ -30,7 +26,7 @@ struct PickerView: View {
     
     var onAddPlayerBlock: ((Player) -> Void)?
     
-    // MARK: - ViewBuilder var
+    // MARK: -
     
     @ViewBuilder private var pickerView: some View {
         ZStack {

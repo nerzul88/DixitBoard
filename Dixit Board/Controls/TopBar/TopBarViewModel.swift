@@ -6,12 +6,12 @@ import SwiftUI
 
 class TopBarViewModel: ObservableObject {
     
-    // MARK: - Internal published var
+    // MARK: - 
     
     var onTapMenu: (() -> Void)?
     var onTapClose: (() -> Void)?
                 
-    // MARK: - Init
+    // MARK: -
     
     init(onTapMenu: (@escaping () -> Void), onTapClose: (@escaping () -> Void)) {
         self.onTapMenu = onTapMenu

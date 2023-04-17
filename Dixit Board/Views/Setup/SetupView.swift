@@ -5,11 +5,7 @@
 import SwiftUI
 
 struct SetupView: View {
-    
-    // MARK: -
-    
-    @Environment(\.dismiss) var dismiss
-    
+        
     // MARK: -
     
     @ObservedObject var viewModel: SetupViewModel

@@ -6,7 +6,7 @@ import SwiftUI
 
 class SetupViewModel: ObservableObject {
     
-    // MARK: - Internal published var
+    // MARK: -
     
     @Binding var players: [Player]
     

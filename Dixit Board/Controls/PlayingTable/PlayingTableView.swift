@@ -11,19 +11,19 @@ struct Coordinate {
 
 struct PlayingTableView: View {
     
-    // MARK: - Internal state object var
+    // MARK: -
     
     @ObservedObject var viewModel: PlayingTableViewModel
     
     @State var coordinates: [Coordinate] = []
     
-    // MARK: - Internal init
+    // MARK: -
     
     init(viewModel: PlayingTableViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
-    // MARK: - ViewBuilder var
+    // MARK: -
     
     @ViewBuilder private var stepView: some View {
         ZStack {
@@ -85,7 +85,7 @@ struct PlayingTableView: View {
         }
     }
     
-    // MARK: - body
+    // MARK: -
     
     var body: some View {
         VStack {

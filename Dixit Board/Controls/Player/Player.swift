@@ -9,6 +9,8 @@ import Foundation
 
 struct Player: Equatable {
     
+    // MARK: -
+    
     static func == (lhs: Player, rhs: Player) -> Bool {
         return lhs.name == rhs.name &&
         lhs.color == rhs.color &&
@@ -17,6 +19,8 @@ struct Player: Equatable {
         lhs.position == rhs.position &&
         lhs.isWon == rhs.isWon
     }
+    
+    // MARK: -
     
     var name: String
     var color: String

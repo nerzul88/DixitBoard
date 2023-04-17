@@ -6,7 +6,7 @@ import SwiftUI
 
 class PickerViewModel: ObservableObject {
     
-    // MARK: - Internal published var
+    // MARK: - 
     
     @Published var newPlayerName: String = "" { didSet { canAddPlayer = !newPlayerName.isEmpty } }
     @Published var newPlayerColor: String

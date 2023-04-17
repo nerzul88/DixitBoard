@@ -6,7 +6,7 @@ import SwiftUI
 
 struct GameView: View {
     
-    // MARK: - Internal state object var
+    // MARK: -
     
     @ObservedObject var viewModel: GameViewModel
     
@@ -22,14 +22,14 @@ struct GameView: View {
 
     @Binding var showGame: Bool
 
-    // MARK: - Internal init
+    // MARK: -
     
     init(viewModel: GameViewModel, showGame: Binding<Bool>) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
         self._showGame = showGame
     }
     
-    // MARK: - ViewBuilder var
+    // MARK: -
     
     @ViewBuilder private var mainView: some View {
         VStack {

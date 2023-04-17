@@ -8,15 +8,12 @@ struct MenuView: View {
     
     // MARK: -
     
-    @Environment(\.dismiss) var dismiss
-    
-    // MARK: -
-    
     @StateObject var viewModel: MenuViewModel
     
+    // MARK: -
+
     @State var showMenu = true
     @State var showSettings = false
-    
     @State var showGame = false
     
     // MARK: -

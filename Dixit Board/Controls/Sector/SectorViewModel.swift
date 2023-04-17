@@ -17,7 +17,5 @@ class SectorViewModel: ObservableObject {
     ) {
         self.sector = sector
     }
-    
-    // MARK: - Internal func
-    
+        
 }

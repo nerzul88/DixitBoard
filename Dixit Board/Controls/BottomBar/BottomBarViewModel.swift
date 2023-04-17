@@ -19,5 +19,4 @@ class BottomBarViewModel: ObservableObject {
         self.players = players
     }
 
-    // MARK: - Internal func
 }

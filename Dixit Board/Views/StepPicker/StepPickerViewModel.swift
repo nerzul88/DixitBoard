@@ -6,7 +6,7 @@ import Foundation
 
 class StepPickerViewModel: ObservableObject {
     
-    // MARK: - Internal published var
+    // MARK: -
         
     @Published var oldSector: Int
     @Published var stepsCount: Int = 1
@@ -14,6 +14,8 @@ class StepPickerViewModel: ObservableObject {
 
     @Published var name: String
     @Published var color: String
+
+    // MARK: -
 
     init(oldSector: Int, name: String, color: String, playersCount: Int) {
         self.name = name

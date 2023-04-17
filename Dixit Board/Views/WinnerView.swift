@@ -32,7 +32,7 @@ struct WinnerView: View {
     
     var onContinueBlock: ((GameMode) -> Void)?
     
-    // MARK: - ViewBuilder var
+    // MARK: -
     
     @ViewBuilder private var winnerView: some View {
         ZStack {
@@ -80,7 +80,6 @@ struct WinnerView: View {
             .padding(.horizontal, 32)
             .padding()
         }
-//        .scaledToFit()
     }
     
     // MARK: -

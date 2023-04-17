@@ -6,17 +6,17 @@ import SwiftUI
 
 struct PlayerView: View {
     
-    // MARK: - Internal state object var
+    // MARK: -
     
     @ObservedObject var viewModel: PlayerViewModel
     
-    // MARK: - Internal init
+    // MARK: -
     
     init(viewModel: PlayerViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
     
-    // MARK: - Internal var
+    // MARK: - 
     
     @ViewBuilder private var player: some View {
         ZStack {

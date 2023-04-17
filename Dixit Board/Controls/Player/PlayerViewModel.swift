@@ -20,7 +20,5 @@ class PlayerViewModel: ObservableObject {
         self.player = player
         self.height = height
     }
-    
-    // MARK: - Internal func
-    
+
 }
