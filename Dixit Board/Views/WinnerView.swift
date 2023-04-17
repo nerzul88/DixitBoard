@@ -47,12 +47,12 @@ struct WinnerView: View {
                 
                 Text("\"\(name)\"")
                     .foregroundColor(Color(Colors.actor))
-                    .font(.system(size: 32))
+                    .font(.system(size: 28))
                     .bold()
                 
                 Text("Заканчивает круг")
                     .foregroundColor(Color(Colors.actor))
-                    .font(.system(size: 24))
+                    .font(.system(size: 18))
                     .bold()
                                 
                 Rectangle()
@@ -61,7 +61,7 @@ struct WinnerView: View {
 
                 Text("Продолжить игру?")
                     .foregroundColor(Color(Colors.actor))
-                    .font(.system(size: 24))
+                    .font(.system(size: 18))
                     .bold()
                     .padding()
                                                     

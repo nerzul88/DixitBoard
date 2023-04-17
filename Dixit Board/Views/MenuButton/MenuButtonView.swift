@@ -47,7 +47,7 @@ struct MenuButtonView: View {
                     }
                     
                     Text(viewModel.title)
-                        .font(.title).bold()
+                        .font(.system(size: 24)).bold()
                         .foregroundColor(Color(Colors.actor))
                         .scaledToFit()
                 }

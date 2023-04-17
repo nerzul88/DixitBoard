@@ -55,9 +55,9 @@ struct SetupView: View {
                             showSetup.toggle()
                         } label: {
                             Image(systemName: "xmark")
-                                .resizable()
+                                .font(.title)
+                                .fontWeight(.bold)
                                 .foregroundColor(Color(Colors.actor))
-                                .frame(width: 32, height: 32)
                         }
                     }
                     .padding(.horizontal)
