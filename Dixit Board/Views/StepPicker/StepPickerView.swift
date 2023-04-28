@@ -20,7 +20,9 @@ struct StepPickerView: View {
     
     // MARK: -
     
-    init(viewModel: StepPickerViewModel, showPicker: Binding<Bool>, onStepBlock: ((Int) -> Void)? = nil) {
+    init(viewModel: StepPickerViewModel,
+         showPicker: Binding<Bool>,
+         onStepBlock: ((Int) -> Void)? = nil) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
         self._showPicker = showPicker
         self.onStepBlock = onStepBlock
@@ -76,7 +78,6 @@ struct StepPickerView: View {
                 MenuButtonView(viewModel: .init(title: "Отмена"), handler: {
                     showPicker.toggle()
                 })
-
             }
             .padding(.horizontal, 32)
             .padding()
@@ -89,7 +90,6 @@ struct StepPickerView: View {
     var body: some View {
         ZStack {
             Color.black.opacity(0.25)
-            
             pickerView
                 .padding()
         }

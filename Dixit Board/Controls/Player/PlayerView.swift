@@ -44,10 +44,8 @@ struct PlayerView: View {
     // MARK: -
     
     var body: some View {
-        
         player
             .frame(height: viewModel.height)
             .scaledToFit()
-        
     }
 }

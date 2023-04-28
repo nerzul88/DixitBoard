@@ -12,10 +12,7 @@ class SectorViewModel: ObservableObject {
     
     // MARK: - Init
     
-    init(
-        sector: Sector
-    ) {
+    init(sector: Sector) {
         self.sector = sector
     }
-        
 }

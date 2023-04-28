@@ -45,9 +45,7 @@ struct PlayingTableView: View {
                 ForEach(0..<7) { row in
                     HStack {
                         ForEach(0..<5) { column in
-                            
                             let number = row == 0 && column == 0 ? 30 : viewModel.getNumber(row - 1, column)
-                            
                             let direction = viewModel.getDirection(row - 1, column)
                             let sector: Sector = .init(
                                 circleRadius: Sizes.sectorRadius,
@@ -58,20 +56,15 @@ struct PlayingTableView: View {
                             )
                             
                             ZStack {
-                                
                                 SectorView(viewModel: .init(sector: sector))
                                     .opacity(row == 0 && column != 0 ? 0 : 1)
-                                
                                 if row == 0 && column == 0 {
-                                    
                                     StackedCircles(players: $viewModel.players, size: Sizes.sectorRadius * 1.5, sector: 30)
                                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                                         .shadow(radius: 3)
                                         .opacity(0.5)
-
                                 } else if row > 0 {
                                     let number = viewModel.getNumber(row - 1, column)
-                                    
                                     StackedCircles(players: $viewModel.players, size: Sizes.sectorRadius * 1.5, sector: number)
                                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                                         .shadow(radius: 3)

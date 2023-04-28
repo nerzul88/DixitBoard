@@ -8,24 +8,25 @@ class PickerViewModel: ObservableObject {
     
     // MARK: - 
     
-    @Published var newPlayerName: String = "" { didSet { canAddPlayer = !newPlayerName.isEmpty } }
+    @Published var newPlayerName: String = "" {
+        didSet {
+            canAddPlayer = !newPlayerName.isEmpty
+        }
+    }
     @Published var newPlayerColor: String
     @Published var expectedNumber: Int
-    
     @Published var canAddPlayer: Bool = false
     
     // MARK: -
     
-    var avaiableColors: [String]
+    var availableColors: [String]
 
     // MARK: -
     
-    init(
-        expectedNumber: Int,
-        avaiableColors: [String]
-    ) {
-        self.avaiableColors = avaiableColors
-        self.newPlayerColor = avaiableColors[0]
+    init(expectedNumber: Int,
+        availableColors: [String]) {
+        self.availableColors = availableColors
+        self.newPlayerColor = availableColors[0]
         self.expectedNumber = expectedNumber
     }
 }

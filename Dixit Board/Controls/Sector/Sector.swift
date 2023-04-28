@@ -30,7 +30,11 @@ struct Sector {
     let number: Int
     let isInitial: Bool
 
-    init(circleRadius: CGFloat, arrowDirection: Direction, arrowMargin: CGFloat, number: Int, isInitial: Bool) {
+    init(circleRadius: CGFloat,
+         arrowDirection: Direction,
+         arrowMargin: CGFloat,
+         number: Int,
+         isInitial: Bool) {
         self.circleRadius = circleRadius
         self.arrowDirection = arrowDirection
         self.arrowMargin = arrowMargin

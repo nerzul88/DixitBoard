@@ -5,7 +5,7 @@
 import SwiftUI
 
 enum GameMode {
-    case counitue
+    case `continue`
     case new
     case close
 }
@@ -66,7 +66,7 @@ struct WinnerView: View {
                     .padding()
                                                     
                 MenuButtonView(viewModel: .init(title: "Продолжить"), handler: {
-                    onContinueBlock?(.counitue)
+                    onContinueBlock?(.`continue`)
                 })
                 
                 MenuButtonView(viewModel: .init(title: "Закончить"), handler: {
@@ -87,11 +87,9 @@ struct WinnerView: View {
     var body: some View {
         ZStack {
             Color.black.opacity(0.25)
-            
             winnerView
                 .padding()
                 .scaledToFit()
-
         }
         .ignoresSafeArea()
     }

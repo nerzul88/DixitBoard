@@ -61,10 +61,8 @@ struct GameView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .blur(radius: 25)
-                .frame(
-                    width: proxy.size.width,
-                    height: proxy.size.height
-                )
+                .frame(width: proxy.size.width,
+                       height: proxy.size.height)
                 .overlay {
                     Color.black.opacity(0.5)
                 }
@@ -74,9 +72,7 @@ struct GameView: View {
             
             if showStepPicker {
                 if let index = viewModel.selectedPlayerIndex {
-                    
                     let player = viewModel.players[index]
-                    
                     StepPickerView(viewModel: .init(oldSector: player.sector, name: player.name, color: player.color, playersCount: viewModel.players.count), showPicker: $showStepPicker) { count in
                         viewModel.makeMove(count, for: index) { name in
                             winnerName = name
@@ -84,7 +80,6 @@ struct GameView: View {
                         }
                     }
                     .background(Color.black.opacity(showStepPicker ? 0.5 : 0))
-
                 }
             }
             
@@ -97,7 +92,7 @@ struct GameView: View {
                     case .close:
                         showWinner.toggle()
                         showOver.toggle()
-                    case .counitue:
+                    case .`continue`:
                         showWinner.toggle()
                     }
                 }
@@ -116,7 +111,6 @@ struct GameView: View {
                     }
                 }
             }
-
         }
     }
 }

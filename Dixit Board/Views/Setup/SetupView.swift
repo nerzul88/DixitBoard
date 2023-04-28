@@ -48,9 +48,7 @@ struct SetupView: View {
             VStack {
                 ZStack {
                     HStack(alignment: .center) {
-                        
                         Spacer()
-                        
                         Button {
                             showSetup.toggle()
                         } label: {
@@ -64,7 +62,6 @@ struct SetupView: View {
                     Text("Игроки")
                         .font(.system(size: 36)).bold()
                         .foregroundColor(Color(Colors.actor))
-                    
                 }
                 
                 Text("Добавьте от 3 до 10 игроков")
@@ -76,26 +73,20 @@ struct SetupView: View {
                     ForEach(Array(viewModel.players.enumerated()), id: \.element.number) { index, player in
                         
                         HStack {
-                            
                             ZStack {
-                                
                                 Circle()
                                     .foregroundColor(Color(player.color))
                                     .addBorder(Color(Colors.actor), width: 2, cornerRadius: 25)
                                     .frame(width: 50
                                     )
-                                
                                 Text("\(index + 1)")
                                     .font(.system(size: 25, weight: .bold, design: .default))
                                     .foregroundColor(Color(Colors.actor))
                             }
-
                             Text("\(player.name.uppercased())")
                                 .font(.system(size: 25, weight: .bold, design: .default))
                                 .foregroundColor(Color(Colors.actor))
-                            
                             Spacer()
-                            
                             Button {
                                     viewModel.players.remove(at: index)
                             } label: {
@@ -155,10 +146,9 @@ struct SetupView: View {
                 }
             
             if showPicker {
-                
                 let expected = (viewModel.players.last?.number ?? 0) + 1
                 
-                PickerView(viewModel: .init(expectedNumber: expected, avaiableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
+                PickerView(viewModel: .init(expectedNumber: expected, availableColors: viewModel.availableColors), showPicker: $showPicker, onAddPlayerBlock: { player in
                     viewModel.players.append(player)
                 })
                     .frame(maxHeight: .infinity)

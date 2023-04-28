@@ -44,7 +44,6 @@ struct SectorView: View {
     // MARK: - body
         
     var body: some View {
-        
         bodyView
     }
 }

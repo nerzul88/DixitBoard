@@ -15,8 +15,7 @@ class PlayerViewModel: ObservableObject {
     
     init(
         player: Player,
-        height: CGFloat = 50
-    ) {
+        height: CGFloat = 50) {
         self.player = player
         self.height = height
     }

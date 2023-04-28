@@ -27,10 +27,8 @@ struct BottomBarView: View {
         ZStack {
             Color.clear
                 .background(
-                    RoundedCornersShape(
-                        corners: [.topLeft, .topRight],
-                        radius: 48
-                    )
+                    RoundedCornersShape(corners: [.topLeft, .topRight],
+                                        radius: 48)
                     .fill(Color(Colors.actor))
                 )
             

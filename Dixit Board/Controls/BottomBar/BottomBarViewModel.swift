@@ -13,10 +13,7 @@ class BottomBarViewModel: ObservableObject {
     
     // MARK: - Init
     
-    init(
-        players: [Player]
-    ) {
+    init(players: [Player]) {
         self.players = players
     }
-
 }

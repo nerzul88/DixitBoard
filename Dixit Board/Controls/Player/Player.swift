@@ -29,13 +29,11 @@ struct Player: Equatable {
     var position: CGPoint
     var isWon: Bool = false
     
-    init(
-        name: String,
-        color: String,
-        number: Int,
-        sector: Int,
-        position: CGPoint
-    ) {
+    init(name: String,
+         color: String,
+         number: Int,
+         sector: Int,
+         position: CGPoint) {
         self.name = name
         self.color = color
         self.number = number

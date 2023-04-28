@@ -25,7 +25,6 @@ class PlayingTableViewModel: ObservableObject {
     
     /// Arrow direction calculating
     func getDirection(_ row: Int, _ column: Int) -> Direction {
-        
         return column == 0
         ? row == 5
         ? .right
@@ -37,17 +36,14 @@ class PlayingTableViewModel: ObservableObject {
         : .left
         : column == 4 ? .up
         : .right
-        
     }
     
     
     /// Sector number calculating
     func getNumber(_ row: Int, _ column: Int) -> Int {
-        
         var cellNum = 0
         
         if column == 0 { return row } else {
-            
             if row % 2 == 0 { // Even string
                 cellNum = (row + 1) * 4 - (3 - column)
                 return 31 - cellNum
@@ -55,8 +51,6 @@ class PlayingTableViewModel: ObservableObject {
                 cellNum = (row + 1) * 4 - column
                 return 29 - cellNum
             }
-            
         }
     }
-    
 }

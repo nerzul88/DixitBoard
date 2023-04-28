@@ -36,14 +36,11 @@ struct TopBarView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(Color(Colors.main))
-                    
                 }
-                
                 Image("dixit-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                                
                 Button(action: { viewModel.onTapClose?() }) {
                     Image(systemName: "xmark")
                         .font(.title)
@@ -55,7 +52,6 @@ struct TopBarView: View {
             .padding(.bottom, 8)
             .padding(.top, 48)
             .shadow(color: .black.opacity(0.25), radius: 50, x: 0, y: 15)
-            
         }
         .frame(height: 100)
     }

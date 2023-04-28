@@ -16,7 +16,9 @@ struct PickerView: View {
     
     // MARK: -
     
-    init(viewModel: PickerViewModel, showPicker: Binding<Bool>, onAddPlayerBlock: ((Player) -> Void)? = nil) {
+    init(viewModel: PickerViewModel,
+         showPicker: Binding<Bool>,
+         onAddPlayerBlock: ((Player) -> Void)? = nil) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
         self._showPicker = showPicker
         self.onAddPlayerBlock = onAddPlayerBlock
@@ -81,7 +83,7 @@ struct PickerView: View {
 
 
                 Picker("", selection: $viewModel.newPlayerColor) {
-                    ForEach(viewModel.avaiableColors, id: \.self) { color in
+                    ForEach(viewModel.availableColors, id: \.self) { color in
                         Text("\(Image(systemName: "circle.fill"))").tag(color)
                             .foregroundColor(Color(color))
                         }

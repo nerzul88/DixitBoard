@@ -16,7 +16,9 @@ struct GameOverView: View {
     
     // MARK: -
     
-    init(names: [String], showGameOver: Binding<Bool>, onContinueBlock: ((GameMode) -> Void)? = nil) {
+    init(names: [String],
+         showGameOver: Binding<Bool>,
+         onContinueBlock: ((GameMode) -> Void)? = nil) {
         self.names = names
         self._showGameOver = showGameOver
         self.onContinueBlock = onContinueBlock
@@ -38,17 +40,14 @@ struct GameOverView: View {
                 )
             
             VStack(spacing: 8) {
-                
                 Text("Поздравляем!")
                     .foregroundColor(Color(Colors.actor))
                     .font(.system(size: 24))
                     .bold()
-                
                 Text("\(names.count > 1 ? "Победили игроки:" : "Победил игрок:")")
                     .foregroundColor(Color(Colors.actor))
                     .font(.system(size: 24))
                     .bold()
-                
                 ForEach(names, id: \.self) { name in
                     Text("\(name)")
                         .foregroundColor(Color(Colors.actor))
@@ -56,11 +55,9 @@ struct GameOverView: View {
                         .bold()
                 }
                 
-                
                 Rectangle()
                     .foregroundColor(Color(Colors.actor))
                     .frame(height: 2)
-                
                 Text("Начать заново?")
                     .foregroundColor(Color(Colors.actor))
                     .font(.system(size: 24))
@@ -68,11 +65,9 @@ struct GameOverView: View {
                     .padding()
                 
                 HStack {
-                    
                     MenuButtonView(viewModel: .init(title: "Да"), handler: {
                         onContinueBlock?(.new)
                     })
-                    
                     MenuButtonView(viewModel: .init(title: "Нет"), handler: {
                         onContinueBlock?(.close)
                     })
@@ -88,11 +83,9 @@ struct GameOverView: View {
     var body: some View {
         ZStack {
             Color.black.opacity(0.25)
-            
             winnerView
                 .padding()
                 .scaledToFit()
-            
         }
         .ignoresSafeArea()
     }

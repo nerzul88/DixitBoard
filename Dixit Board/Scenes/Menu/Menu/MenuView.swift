@@ -15,6 +15,8 @@ struct MenuView: View {
     @State var showMenu = true
     @State var showSettings = false
     @State var showGame = false
+    @State var continueGame = false
+    @State var showRules = false
     
     // MARK: -
     
@@ -29,14 +31,15 @@ struct MenuView: View {
             MenuButtonView(viewModel: .init(title: "Новая игра")) {
                 
                 viewModel.players.removeAll()
-                
                 withAnimation {
                     showSettings.toggle()
                 }
             }
             
-            MenuButtonView(viewModel: .init(title: "Продолжить игру")) {
-                // empty.
+            if continueGame {
+                MenuButtonView(viewModel: .init(title: "Продолжить игру")) {
+                    // empty.
+                }
             }
 
             MenuButtonView(viewModel: .init(title: "Правила")) {
@@ -44,31 +47,24 @@ struct MenuView: View {
             }
         }
     }
-
     
     @ViewBuilder private var mainView: some View {
         
         ZStack {
-            
             GeometryReader { proxy in
                 Image("wild")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(
-                    width: proxy.size.width,
-                    height: proxy.size.height
-                )
+                .frame(width: proxy.size.width,
+                       height: proxy.size.height)
             }
 
             VStack {
-                
                 Spacer()
-                
                 Image("dixit-logo")
                     .resizable()
                     .scaledToFit()
                     .frame(maxWidth: .infinity)
-                
                 Spacer()
                 
                 if showMenu {
@@ -77,7 +73,6 @@ struct MenuView: View {
             }
             .padding(.horizontal)
             .padding(.vertical, 32)
-            
         }
         .ignoresSafeArea()
     }
